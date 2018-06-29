@@ -70,11 +70,11 @@ Removing Unused input sections from the image.
     Removing uart.o(.revsh_text), (4 bytes).
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
-    Removing main.o(.constdata), (20 bytes).
+    Removing main.o(.constdata), (40 bytes).
     Removing glcd_scroll.o(i.last_line), (32 bytes).
     Removing glcd_scroll.o(i.last_window_line), (32 bytes).
 
-26 unused section(s) (total 14107 bytes) removed from the image.
+26 unused section(s) (total 14127 bytes) removed from the image.
 
 ==============================================================================
 
@@ -86,12 +86,12 @@ Image Symbol Table
 
     RESET                                    0x00000000   Section      204  startup_lpc17xx.o(RESET)
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     C:\Software\Keil\ARM\Startup\NXP\LPC17xx\system_LPC17xx.c 0x00000000   Number         0  system_lpc17xx.o ABSOLUTE
@@ -121,16 +121,13 @@ Image Symbol Table
     __lit__00000000                          0x000000dc   Data           4  entry2.o(.ARM.Collect$$$$00002712)
     .text                                    0x000000e0   Section       36  startup_lpc17xx.o(.text)
     .text                                    0x00000104   Section        0  main.o(.text)
-    .text                                    0x000001e0   Section        0  uldiv.o(.text)
-    .text                                    0x00000242   Section        0  llshl.o(.text)
-    .text                                    0x00000260   Section        0  llushr.o(.text)
-    .text                                    0x00000280   Section       36  init.o(.text)
-    i.__scatterload_copy                     0x000002a4   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x000002b2   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x000002b4   Section       14  handlers.o(i.__scatterload_zeroinit)
-    .constdata                               0x000002c4   Section       40  rtx_config.o(.constdata)
-    __tagsym$$used                           0x000002d8   Number         0  rtx_config.o(.constdata)
-    __tagsym$$used                           0x000002dc   Number         0  rtx_config.o(.constdata)
+    .text                                    0x00000200   Section        0  uldiv.o(.text)
+    .text                                    0x00000262   Section        0  llshl.o(.text)
+    .text                                    0x00000280   Section        0  llushr.o(.text)
+    .text                                    0x000002a0   Section       36  init.o(.text)
+    i.__scatterload_copy                     0x000002c4   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x000002d2   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x000002d4   Section       14  handlers.o(i.__scatterload_zeroinit)
     .ARM.__at_0x02FC                         0x000002fc   Section        4  startup_lpc17xx.o(.ARM.__at_0x02FC)
     .text                                    0x00000300   Section        0  system_lpc17xx.o(.text)
     .text                                    0x00000618   Section        0  glcd_spi_lpc1700.o(.text)
@@ -148,6 +145,9 @@ Image Symbol Table
     .text                                    0x000011bc   Section        0  uart.o(.text)
     NVIC_EnableIRQ                           0x00001515   Thumb Code    24  uart.o(.text)
     .constdata                               0x00001568   Section     6272  glcd_spi_lpc1700.o(.constdata)
+    .constdata                               0x00002de8   Section       40  rtx_config.o(.constdata)
+    __tagsym$$used                           0x00002dfc   Number         0  rtx_config.o(.constdata)
+    __tagsym$$used                           0x00002e00   Number         0  rtx_config.o(.constdata)
     .data                                    0x10000000   Section        4  system_lpc17xx.o(.data)
     .data                                    0x10000004   Section        5  glcd_spi_lpc1700.o(.data)
     Color                                    0x10000004   Data           4  glcd_spi_lpc1700.o(.data)
@@ -218,28 +218,17 @@ Image Symbol Table
     lcdInit                                  0x00000131   Thumb Code    28  main.o(.text)
     initialization                           0x0000014d   Thumb Code    16  main.o(.text)
     ledDisplay                               0x0000015d   Thumb Code   118  main.o(.text)
-    main                                     0x000001d3   Thumb Code    10  main.o(.text)
-    __aeabi_uldivmod                         0x000001e1   Thumb Code    98  uldiv.o(.text)
-    __aeabi_llsl                             0x00000243   Thumb Code    30  llshl.o(.text)
-    _ll_shift_l                              0x00000243   Thumb Code     0  llshl.o(.text)
-    __aeabi_llsr                             0x00000261   Thumb Code    32  llushr.o(.text)
-    _ll_ushift_r                             0x00000261   Thumb Code     0  llushr.o(.text)
-    __scatterload                            0x00000281   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x00000281   Thumb Code     0  init.o(.text)
-    __scatterload_copy                       0x000002a5   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x000002b3   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x000002b5   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    os_maxtaskrun                            0x000002c4   Data           2  rtx_config.o(.constdata)
-    os_stackinfo                             0x000002c8   Data           4  rtx_config.o(.constdata)
-    os_rrobin                                0x000002cc   Data           4  rtx_config.o(.constdata)
-    os_trv                                   0x000002d0   Data           4  rtx_config.o(.constdata)
-    os_flags                                 0x000002d4   Data           1  rtx_config.o(.constdata)
-    os_clockrate                             0x000002d8   Data           4  rtx_config.o(.constdata)
-    os_timernum                              0x000002dc   Data           4  rtx_config.o(.constdata)
-    mp_tcb_size                              0x000002e0   Data           2  rtx_config.o(.constdata)
-    mp_stk_size                              0x000002e4   Data           4  rtx_config.o(.constdata)
-    os_fifo_size                             0x000002e8   Data           1  rtx_config.o(.constdata)
-    mp_tmr_size                              0x000002ea   Data           2  rtx_config.o(.constdata)
+    main                                     0x000001d3   Thumb Code    42  main.o(.text)
+    __aeabi_uldivmod                         0x00000201   Thumb Code    98  uldiv.o(.text)
+    __aeabi_llsl                             0x00000263   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x00000263   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x00000281   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x00000281   Thumb Code     0  llushr.o(.text)
+    __scatterload                            0x000002a1   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x000002a1   Thumb Code     0  init.o(.text)
+    __scatterload_copy                       0x000002c5   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x000002d3   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x000002d5   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     SystemCoreClockUpdate                    0x00000301   Thumb Code   424  system_lpc17xx.o(.text)
     SystemInit                               0x000004a9   Thumb Code   290  system_lpc17xx.o(.text)
     GLCD_Init                                0x000007b1   Thumb Code  1514  glcd_spi_lpc1700.o(.text)
@@ -274,8 +263,19 @@ Image Symbol Table
     UARTReceiveChar                          0x000014fb   Thumb Code    26  uart.o(.text)
     Font_6x8_h                               0x00001568   Data         896  glcd_spi_lpc1700.o(.constdata)
     Font_16x24_h                             0x000018e8   Data        5376  glcd_spi_lpc1700.o(.constdata)
-    Region$$Table$$Base                      0x00002de8   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00002e08   Number         0  anon$$obj.o(Region$$Table)
+    os_maxtaskrun                            0x00002de8   Data           2  rtx_config.o(.constdata)
+    os_stackinfo                             0x00002dec   Data           4  rtx_config.o(.constdata)
+    os_rrobin                                0x00002df0   Data           4  rtx_config.o(.constdata)
+    os_trv                                   0x00002df4   Data           4  rtx_config.o(.constdata)
+    os_flags                                 0x00002df8   Data           1  rtx_config.o(.constdata)
+    os_clockrate                             0x00002dfc   Data           4  rtx_config.o(.constdata)
+    os_timernum                              0x00002e00   Data           4  rtx_config.o(.constdata)
+    mp_tcb_size                              0x00002e04   Data           2  rtx_config.o(.constdata)
+    mp_stk_size                              0x00002e08   Data           4  rtx_config.o(.constdata)
+    os_fifo_size                             0x00002e0c   Data           1  rtx_config.o(.constdata)
+    mp_tmr_size                              0x00002e0e   Data           2  rtx_config.o(.constdata)
+    Region$$Table$$Base                      0x00002e10   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00002e30   Number         0  anon$$obj.o(Region$$Table)
     SystemCoreClock                          0x10000000   Data           4  system_lpc17xx.o(.data)
     ITM_RxBuffer                             0x1000000c   Data           4  uart.o(.data)
     UART0TxEmpty                             0x10000010   Data           1  uart.o(.data)
@@ -301,9 +301,9 @@ Memory Map of the image
 
   Image Entry point : 0x000000cd
 
-  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00002e34, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00002e5c, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00002e08, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00002e30, Max: 0x00080000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -315,23 +315,22 @@ Memory Map of the image
     0x000000d4   0x00000008   Code   RO          290    .ARM.Collect$$$$00000009  mc_w.l(entry8.o)
     0x000000dc   0x00000004   Code   RO          285    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x000000e0   0x00000024   Code   RO            5    .text               startup_lpc17xx.o
-    0x00000104   0x000000dc   Code   RO          249    .text               main.o
-    0x000001e0   0x00000062   Code   RO          282    .text               mc_w.l(uldiv.o)
-    0x00000242   0x0000001e   Code   RO          291    .text               mc_w.l(llshl.o)
-    0x00000260   0x00000020   Code   RO          293    .text               mc_w.l(llushr.o)
-    0x00000280   0x00000024   Code   RO          295    .text               mc_w.l(init.o)
-    0x000002a4   0x0000000e   Code   RO          299    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x000002b2   0x00000002   Code   RO          300    i.__scatterload_null  mc_w.l(handlers.o)
-    0x000002b4   0x0000000e   Code   RO          301    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x000002c2   0x00000002   PAD
-    0x000002c4   0x00000028   Data   RO          199    .constdata          rtx_config.o
-    0x000002ec   0x00000010   PAD
+    0x00000104   0x000000fc   Code   RO          249    .text               main.o
+    0x00000200   0x00000062   Code   RO          282    .text               mc_w.l(uldiv.o)
+    0x00000262   0x0000001e   Code   RO          291    .text               mc_w.l(llshl.o)
+    0x00000280   0x00000020   Code   RO          293    .text               mc_w.l(llushr.o)
+    0x000002a0   0x00000024   Code   RO          295    .text               mc_w.l(init.o)
+    0x000002c4   0x0000000e   Code   RO          299    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x000002d2   0x00000002   Code   RO          300    i.__scatterload_null  mc_w.l(handlers.o)
+    0x000002d4   0x0000000e   Code   RO          301    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x000002e2   0x0000001a   PAD
     0x000002fc   0x00000004   Code   RO            4    .ARM.__at_0x02FC    startup_lpc17xx.o
     0x00000300   0x00000318   Code   RO           15    .text               system_lpc17xx.o
     0x00000618   0x00000ba4   Code   RO          111    .text               glcd_spi_lpc1700.o
     0x000011bc   0x000003ac   Code   RO          222    .text               uart.o
     0x00001568   0x00001880   Data   RO          112    .constdata          glcd_spi_lpc1700.o
-    0x00002de8   0x00000020   Data   RO          297    Region$$Table       anon$$obj.o
+    0x00002de8   0x00000028   Data   RO          199    .constdata          rtx_config.o
+    0x00002e10   0x00000020   Data   RO          297    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x10000000, Size: 0x000020b0, Max: 0x00008000, ABSOLUTE)
@@ -355,16 +354,16 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
       2980         62       6272          5          0      25384   glcd_spi_lpc1700.o
-       220          4          0          0          0        989   main.o
+       252          4          0          0          0       1053   main.o
          0          0         40          0          0       7919   rtx_config.o
         40         12        204          0       8192        864   startup_lpc17xx.o
        792         78          0          4          0       5225   system_lpc17xx.o
        940         60          0         32        128      28895   uart.o
 
     ----------------------------------------------------------------------
-      4972        216       6564         44       8324      69276   Object Totals
+      5004        216       6548         44       8324      69340   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         0          0         16          3          4          0   (incl. Padding)
+         0          0          0          3          4          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -382,8 +381,8 @@ Image component sizes
         98          0          0          0          0         92   uldiv.o
 
     ----------------------------------------------------------------------
-       248         16          0          0          0        296   Library Totals
-         2          0          0          0          0          0   (incl. Padding)
+       272         16          0          0          0        296   Library Totals
+        26          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -392,7 +391,7 @@ Image component sizes
        246         16          0          0          0        296   mc_w.l
 
     ----------------------------------------------------------------------
-       248         16          0          0          0        296   Library Totals
+       272         16          0          0          0        296   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -401,15 +400,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      5220        232       6564         44       8324      69104   Grand Totals
-      5220        232       6564         44       8324      69104   ELF Image Totals
-      5220        232       6564         44          0          0   ROM Totals
+      5276        232       6548         44       8324      69168   Grand Totals
+      5276        232       6548         44       8324      69168   ELF Image Totals
+      5276        232       6548         44          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                11784 (  11.51kB)
+    Total RO  Size (Code + RO Data)                11824 (  11.55kB)
     Total RW  Size (RW Data + ZI Data)              8368 (   8.17kB)
-    Total ROM Size (Code + RO Data + RW Data)      11828 (  11.55kB)
+    Total ROM Size (Code + RO Data + RW Data)      11868 (  11.59kB)
 
 ==============================================================================
 

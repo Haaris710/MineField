@@ -39,7 +39,7 @@ static const uint32_t map[10] = {
 	0xC3000300,
 	0x13383038,
 	0
-}
+};
 
 void ledInit() {
 	//set LEDs to output
@@ -55,11 +55,6 @@ void lcdInit() {
 	GLCD_Clear(Blue);
 	GLCD_SetBackColor(Blue);
 	GLCD_SetTextColor(White);
-}
-
-void printMap() {
-	map = {
-		
 }
 
 void initialization() {
@@ -102,5 +97,13 @@ void ledDisplay(uint8_t num) {
 }
 
 int main(void) {
+	int i = 0;
+	int j = 0;
 	initialization();
+	
+	for(i=0;i<16;i++) {
+		for(j=0;j<16;i++) {
+			GLCD_PutPixel(i,j);
+		}
+	}
 }
