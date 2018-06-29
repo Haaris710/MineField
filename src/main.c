@@ -29,7 +29,7 @@
 	as occupied or unoccupied.
 */
 static const uint32_t map[10] = {
-	0,
+	0x00000000,
 	0x00001F30,
 	0x1F300002,
 	0x000201F0,
@@ -38,7 +38,7 @@ static const uint32_t map[10] = {
 	0xC339C339,
 	0xC3000300,
 	0x13383038,
-	0
+	0x00000000
 };
 
 void ledInit() {
@@ -50,10 +50,51 @@ void ledInit() {
 	LPC_GPIO2->FIOCLR |= LED_ALL_G2;
 }
 
+/*Prints a 16 pixel square block with parameters 
+  as X and Y which represent scaled co-ordinates */
+void blockPrint(int x, int y){
+	int i = 0;
+	int j = 0;
+	//scaling the co-ordinates
+	x = x*16;
+	y = y*16;
+	//printing the block
+	for(i=x;i<(x+16);i++) {
+		for(j=y;j<(y+16);j++) {
+			GLCD_PutPixel(i, j);
+		}
+	}
+}
+
+/*Prints the game map utlizing the blockPrint utility */
+void mapPrint(void){
+	int i=0;
+	int j=0;
+	uint32_t buffer = 0;
+	
+	//printing map
+	for(i=0;i<10;i++){
+		buffer = map[i];
+			
+		//(Nth) Column
+		for(j=0;j<15;j++){
+			if(buffer & (0x1 << j)){
+				blockPrint((i*2), (j));
+			}
+		}
+		//(Nth + 1)  Column
+		for(j=16;j<32;j++){
+			if(buffer & (0x1 << j)){
+				blockPrint(((i*2)+1), (j-16));
+			}
+		}		
+	}
+}
+
 void lcdInit() {
 	GLCD_Init();
 	GLCD_Clear(Blue);
-	GLCD_SetBackColor(Blue);
+	GLCD_SetBackColor(Brown);
 	GLCD_SetTextColor(White);
 }
 
@@ -97,13 +138,9 @@ void ledDisplay(uint8_t num) {
 }
 
 int main(void) {
-	int i = 0;
-	int j = 0;
 	initialization();
 	
-	for(i=0;i<16;i++) {
-		for(j=0;j<16;i++) {
-			GLCD_PutPixel(i,j);
-		}
-	}
+	mapPrint();
+	//blockPrint(0,0);
+	//blockPrint(19,14);
 }
