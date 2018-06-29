@@ -3,7 +3,249 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-N:\mte241\Project4\MinefieldGame.uvproj
+N:\Program Files\MineField\src\MinefieldGame.uvproj
 Project File Date:  06/29/2018
 
 <h2>Output:</h2>
+Build target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling ece_spi.c...
+ece_spi.c(6): error:  #5: cannot open source input file "ECE_SPI.h": No such file or directory
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling led.c...
+compiling Retarget.c...
+compiling RTX_config.c...
+compiling uart.c...
+compiling main.c...
+main.c(29): error:  #20: identifier "ALL_LED_G1" is undefined
+main.c(30): error:  #20: identifier "ALL_LED_G2" is undefined
+main.c(34): warning:  #223-D: function "GLCD_Init" declared implicitly
+main.c(35): warning:  #223-D: function "GLCD_Clear" declared implicitly
+main.c(35): error:  #20: identifier "Blue" is undefined
+main.c(36): warning:  #223-D: function "GLCD_SetBackColor" declared implicitly
+main.c(37): warning:  #223-D: function "GLCD_SetTextColor" declared implicitly
+main.c(37): error:  #20: identifier "White" is undefined
+main.c(40): error:  #70: incomplete type is not allowed
+main.c(40): error:  #65: expected a ";"
+main.c(68): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(69): error:  #77-D: this declaration has no storage class or type specifier
+main.c(69): error:  #65: expected a ";"
+main.c(70): error:  #77-D: this declaration has no storage class or type specifier
+main.c(70): error:  #65: expected a ";"
+main.c(71): error:  #77-D: this declaration has no storage class or type specifier
+main.c(71): error:  #65: expected a ";"
+main.c(72): error:  #77-D: this declaration has no storage class or type specifier
+main.c(72): error:  #65: expected a ";"
+main.c(75): error:  #18: expected a ")"
+main.c(75): error:  #79: expected a type specifier
+main.c(75): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(75): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(75): error:  #130: expected a "{"
+main.c(81): warning:  #1-D: last line of file ends without a newline
+main.c(22): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling ece_spi.c...
+ece_spi.c(6): error:  #5: cannot open source input file "ECE_SPI.h": No such file or directory
+compiling main.c...
+main.c(29): error:  #29: expected an expression
+main.c(30): error:  #29: expected an expression
+main.c(34): warning:  #223-D: function "GLCD_Init" declared implicitly
+main.c(35): warning:  #223-D: function "GLCD_Clear" declared implicitly
+main.c(35): error:  #20: identifier "Blue" is undefined
+main.c(36): warning:  #223-D: function "GLCD_SetBackColor" declared implicitly
+main.c(37): warning:  #223-D: function "GLCD_SetTextColor" declared implicitly
+main.c(37): error:  #20: identifier "White" is undefined
+main.c(40): error:  #70: incomplete type is not allowed
+main.c(40): error:  #65: expected a ";"
+main.c(68): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(69): error:  #77-D: this declaration has no storage class or type specifier
+main.c(69): error:  #65: expected a ";"
+main.c(70): error:  #77-D: this declaration has no storage class or type specifier
+main.c(70): error:  #65: expected a ";"
+main.c(71): error:  #77-D: this declaration has no storage class or type specifier
+main.c(71): error:  #65: expected a ";"
+main.c(72): error:  #77-D: this declaration has no storage class or type specifier
+main.c(72): error:  #65: expected a ";"
+main.c(75): error:  #18: expected a ")"
+main.c(75): error:  #79: expected a type specifier
+main.c(75): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(75): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(75): error:  #130: expected a "{"
+main.c(81): warning:  #1-D: last line of file ends without a newline
+main.c(22): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling ece_spi.c...
+ece_spi.c(6): error:  #5: cannot open source input file "ECE_SPI.h": No such file or directory
+compiling main.c...
+main.c(29): error:  #29: expected an expression
+main.c(30): error:  #29: expected an expression
+main.c(34): warning:  #223-D: function "GLCD_Init" declared implicitly
+main.c(35): warning:  #223-D: function "GLCD_Clear" declared implicitly
+main.c(35): error:  #20: identifier "Blue" is undefined
+main.c(36): warning:  #223-D: function "GLCD_SetBackColor" declared implicitly
+main.c(37): warning:  #223-D: function "GLCD_SetTextColor" declared implicitly
+main.c(37): error:  #20: identifier "White" is undefined
+main.c(40): error:  #70: incomplete type is not allowed
+main.c(40): error:  #65: expected a ";"
+main.c(68): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(69): error:  #77-D: this declaration has no storage class or type specifier
+main.c(69): error:  #65: expected a ";"
+main.c(70): error:  #77-D: this declaration has no storage class or type specifier
+main.c(70): error:  #65: expected a ";"
+main.c(71): error:  #77-D: this declaration has no storage class or type specifier
+main.c(71): error:  #65: expected a ";"
+main.c(72): error:  #77-D: this declaration has no storage class or type specifier
+main.c(72): error:  #65: expected a ";"
+main.c(75): error:  #18: expected a ")"
+main.c(75): error:  #79: expected a type specifier
+main.c(75): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(75): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(75): error:  #130: expected a "{"
+main.c(81): warning:  #1-D: last line of file ends without a newline
+main.c(22): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(29): error:  #29: expected an expression
+main.c(30): error:  #29: expected an expression
+main.c(34): warning:  #223-D: function "GLCD_Init" declared implicitly
+main.c(35): warning:  #223-D: function "GLCD_Clear" declared implicitly
+main.c(35): error:  #20: identifier "Blue" is undefined
+main.c(36): warning:  #223-D: function "GLCD_SetBackColor" declared implicitly
+main.c(37): warning:  #223-D: function "GLCD_SetTextColor" declared implicitly
+main.c(37): error:  #20: identifier "White" is undefined
+main.c(40): error:  #70: incomplete type is not allowed
+main.c(40): error:  #65: expected a ";"
+main.c(68): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(69): error:  #77-D: this declaration has no storage class or type specifier
+main.c(69): error:  #65: expected a ";"
+main.c(70): error:  #77-D: this declaration has no storage class or type specifier
+main.c(70): error:  #65: expected a ";"
+main.c(71): error:  #77-D: this declaration has no storage class or type specifier
+main.c(71): error:  #65: expected a ";"
+main.c(72): error:  #77-D: this declaration has no storage class or type specifier
+main.c(72): error:  #65: expected a ";"
+main.c(75): error:  #18: expected a ")"
+main.c(75): error:  #79: expected a type specifier
+main.c(75): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(75): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(75): error:  #130: expected a "{"
+main.c(81): warning:  #1-D: last line of file ends without a newline
+main.c(22): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(29): error:  #29: expected an expression
+main.c(30): error:  #29: expected an expression
+main.c(34): warning:  #223-D: function "GLCD_Init" declared implicitly
+main.c(35): warning:  #223-D: function "GLCD_Clear" declared implicitly
+main.c(35): error:  #20: identifier "Blue" is undefined
+main.c(36): warning:  #223-D: function "GLCD_SetBackColor" declared implicitly
+main.c(37): warning:  #223-D: function "GLCD_SetTextColor" declared implicitly
+main.c(37): error:  #20: identifier "White" is undefined
+main.c(40): error:  #70: incomplete type is not allowed
+main.c(40): error:  #65: expected a ";"
+main.c(68): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(69): error:  #77-D: this declaration has no storage class or type specifier
+main.c(69): error:  #65: expected a ";"
+main.c(70): error:  #77-D: this declaration has no storage class or type specifier
+main.c(70): error:  #65: expected a ";"
+main.c(71): error:  #77-D: this declaration has no storage class or type specifier
+main.c(71): error:  #65: expected a ";"
+main.c(72): error:  #77-D: this declaration has no storage class or type specifier
+main.c(72): error:  #65: expected a ";"
+main.c(75): error:  #18: expected a ")"
+main.c(75): error:  #79: expected a type specifier
+main.c(75): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(75): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(75): error:  #130: expected a "{"
+main.c(81): warning:  #1-D: last line of file ends without a newline
+main.c(22): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(29): warning:  #61-D: integer operation result is out of range
+main.c(34): warning:  #223-D: function "GLCD_Init" declared implicitly
+main.c(35): warning:  #223-D: function "GLCD_Clear" declared implicitly
+main.c(35): error:  #20: identifier "Blue" is undefined
+main.c(36): warning:  #223-D: function "GLCD_SetBackColor" declared implicitly
+main.c(37): warning:  #223-D: function "GLCD_SetTextColor" declared implicitly
+main.c(37): error:  #20: identifier "White" is undefined
+main.c(40): error:  #70: incomplete type is not allowed
+main.c(40): error:  #65: expected a ";"
+main.c(68): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(69): error:  #77-D: this declaration has no storage class or type specifier
+main.c(69): error:  #65: expected a ";"
+main.c(70): error:  #77-D: this declaration has no storage class or type specifier
+main.c(70): error:  #65: expected a ";"
+main.c(71): error:  #77-D: this declaration has no storage class or type specifier
+main.c(71): error:  #65: expected a ";"
+main.c(72): error:  #77-D: this declaration has no storage class or type specifier
+main.c(72): error:  #65: expected a ";"
+main.c(75): error:  #18: expected a ")"
+main.c(75): error:  #79: expected a type specifier
+main.c(75): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(75): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(75): error:  #130: expected a "{"
+main.c(81): warning:  #1-D: last line of file ends without a newline
+main.c(22): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(30): warning:  #61-D: integer operation result is out of range
+main.c(41): error:  #70: incomplete type is not allowed
+main.c(41): error:  #65: expected a ";"
+main.c(69): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(70): error:  #77-D: this declaration has no storage class or type specifier
+main.c(70): error:  #65: expected a ";"
+main.c(71): error:  #77-D: this declaration has no storage class or type specifier
+main.c(71): error:  #65: expected a ";"
+main.c(72): error:  #77-D: this declaration has no storage class or type specifier
+main.c(72): error:  #65: expected a ";"
+main.c(73): error:  #77-D: this declaration has no storage class or type specifier
+main.c(73): error:  #65: expected a ";"
+main.c(76): error:  #18: expected a ")"
+main.c(76): error:  #79: expected a type specifier
+main.c(76): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(76): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(76): error:  #130: expected a "{"
+main.c(82): warning:  #1-D: last line of file ends without a newline
+main.c(23): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(30): warning:  #61-D: integer operation result is out of range
+main.c(52): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(56): error:  #20: identifier "ALL_LED_G1" is undefined
+main.c(57): error:  #20: identifier "ALL_LED_G2" is undefined
+main.c(60): error:  #20: identifier "BIT7" is undefined
+main.c(72): error:  #20: identifier "BIT1" is undefined
+main.c(73): error:  #20: identifier "BIT0" is undefined
+main.c(82): warning:  #1-D: last line of file ends without a newline
+main.c(23): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(30): warning:  #61-D: integer operation result is out of range
+main.c(52): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(56): warning:  #61-D: integer operation result is out of range
+main.c(60): error:  #20: identifier "BIT7" is undefined
+main.c(72): error:  #20: identifier "BIT1" is undefined
+main.c(73): error:  #20: identifier "BIT0" is undefined
+main.c(82): warning:  #1-D: last line of file ends without a newline
+main.c(23): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(33): warning:  #61-D: integer operation result is out of range
+main.c(55): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(59): warning:  #61-D: integer operation result is out of range
+main.c(85): warning:  #1-D: last line of file ends without a newline
+main.c(26): warning:  #177-D: variable "map" was declared but never referenced
+linking...
+Program Size: Code=5220 RO-data=6564 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
