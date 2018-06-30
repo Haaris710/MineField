@@ -3,6 +3,7 @@
 ### Creating ADS-LD Command Line
 ### List of Objects: adding '"startup_lpc17xx.o"'
 ### List of Objects: adding '"system_lpc17xx.o"'
+### List of Objects: adding '"ece_spi.o"'
 ### List of Objects: adding '"glcd_scroll.o"'
 ### List of Objects: adding '"glcd_spi_lpc1700.o"'
 ### List of Objects: adding '"led.o"'
@@ -11,7 +12,7 @@
 ### List of Objects: adding '"uart.o"'
 ### List of Objects: adding '"main.o"'
 ### ADS-LD Command completed:
---cpu Cortex-M3 "startup_lpc17xx.o" "system_lpc17xx.o" "glcd_scroll.o" "glcd_spi_lpc1700.o" "led.o" "retarget.o" "rtx_config.o" "uart.o" "main.o" 
+--cpu Cortex-M3 "startup_lpc17xx.o" "system_lpc17xx.o" "ece_spi.o" "glcd_scroll.o" "glcd_spi_lpc1700.o" "led.o" "retarget.o" "rtx_config.o" "uart.o" "main.o" 
 --library_type=microlib --strict --scatter "MinefieldGame.sct" 
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
@@ -19,7 +20,7 @@
 ### ADS-LD Output File: 'MinefieldGame.axf'
 ### ADS-LD Command File: 'MinefieldGame.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'MinefieldGame.lnp', Handle=0x00000850
+### Creating CmdFile 'MinefieldGame.lnp', Handle=0x00000A90
 ### Writing '.lnp' file
 ### ADS-LD Command file 'MinefieldGame.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
