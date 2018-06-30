@@ -91,11 +91,13 @@ void blockClear(int x, int y){
 	}
 }
 
+void tankMove(int tankX, int tankY) {
 	//VARIABLES
 	uint32_t buffer = 0;
 	
 	//Read from GPIO1
 	buffer |= LPC_GPIO1->FIOPIN;
+	while(1){
 	//UP
 	if((buffer & BIT23) == 0) {
 		blockClear(tankX,tankY);
@@ -130,6 +132,7 @@ void blockClear(int x, int y){
 	else
 		printf("Not Pressed");
 	printf("\r\r");
+	}
 }
 
 void mapPrint(void) {
@@ -196,7 +199,14 @@ void ledDisplay(uint8_t num) {
 }
 
 int main(void) {
+	int i=0;
 	initialization();
 	
 	mapPrint();
+	blockPrint(0,0);
+	//tankMove(0,0);
+	blockClear(0,0);
+	while(1) {
+	
+	}
 }
