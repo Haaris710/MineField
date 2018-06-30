@@ -3,7 +3,7 @@
 <title>Static Call Graph - [N:\GitProjects\Git\MineField\src\MinefieldGame.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image N:\GitProjects\Git\MineField\src\MinefieldGame.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.02 [Build 28]: Last Updated: Sat Jun 30 11:33:04 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.02 [Build 28]: Last Updated: Sat Jun 30 12:14:37 2018
 <BR><P>
 <H3>Maximum Stack Usage =         96 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -338,7 +338,7 @@ Global Symbols
 <P><STRONG><a name="[76]"></a>__1printf$bare</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare), UNUSED)
 
 <P><STRONG><a name="[67]"></a>__2printf</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, printfb.o(i.__0printf$bare), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tankmove
+<BR><BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tankMove
 </UL>
 
 <P><STRONG><a name="[77]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
@@ -397,8 +397,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blockPrint
 </UL>
 
-<P><STRONG><a name="[4d]"></a>GLCD_RemovePixel</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, glcd_spi_lpc1700.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wr_reg
+<P><STRONG><a name="[4d]"></a>GLCD_RemovePixel</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, glcd_spi_lpc1700.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GLCD_RemovePixel &rArr; wr_reg &rArr; wr_dat
+</UL>
+<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wr_reg
 <LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wr_dat
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wr_cmd
 </UL>
@@ -571,17 +573,21 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_PutPixel
 </UL>
-<BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mapPrint
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tankmove
+<BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mapPrint
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tankMove
 </UL>
 
-<P><STRONG><a name="[65]"></a>blockClear</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, main.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_RemovePixel
+<P><STRONG><a name="[65]"></a>blockClear</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, main.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = blockClear &rArr; GLCD_RemovePixel &rArr; wr_reg &rArr; wr_dat
 </UL>
-<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Tankmove
+<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_RemovePixel
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tankMove
 </UL>
 
-<P><STRONG><a name="[66]"></a>Tankmove</STRONG> (Thumb, 158 bytes, Stack size 16 bytes, main.o(.text), UNUSED)
+<P><STRONG><a name="[66]"></a>tankMove</STRONG> (Thumb, 158 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blockClear
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blockPrint
@@ -618,11 +624,13 @@ Global Symbols
 
 <P><STRONG><a name="[7b]"></a>ledDisplay</STRONG> (Thumb, 118 bytes, Stack size 0 bytes, main.o(.text), UNUSED)
 
-<P><STRONG><a name="[2d]"></a>main</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, main.o(.text))
+<P><STRONG><a name="[2d]"></a>main</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, main.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = main &rArr; initialization &rArr; lcdInit &rArr; GLCD_Clear &rArr; GLCD_WindowMax &rArr; GLCD_SetWindow &rArr; wr_reg &rArr; wr_dat
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initialization
 <LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mapPrint
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blockClear
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;blockPrint
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry8.o(.ARM.Collect$$$$00000009)
 </UL><P>

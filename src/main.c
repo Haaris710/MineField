@@ -91,15 +91,11 @@ void blockClear(int x, int y){
 	}
 }
 
-void Tankmove(void) {
 	//VARIABLES
 	uint32_t buffer = 0;
-	int tankX = 0;
-	int tankY = 0;
 	
 	//Read from GPIO1
 	buffer |= LPC_GPIO1->FIOPIN;
-	
 	//UP
 	if((buffer & BIT23) == 0) {
 		blockClear(tankX,tankY);
@@ -200,9 +196,7 @@ void ledDisplay(uint8_t num) {
 }
 
 int main(void) {
-//	int i=0;
 	initialization();
 	
 	mapPrint();
-	while(1) {}
 }
