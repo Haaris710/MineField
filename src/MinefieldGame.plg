@@ -3,7 +3,493 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-N:\Program Files\Git\MineField\src\MinefieldGame.uvproj
-Project File Date:  06/29/2018
+N:\GitProjects\Git\MineField\src\MinefieldGame.uvproj
+Project File Date:  06/30/2018
 
 <h2>Output:</h2>
+Build target 'Target 1'
+compiling ece_spi.c...
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling led.c...
+compiling Retarget.c...
+compiling uart.c...
+compiling main.c...
+main.c(5): error:  #11-D: unrecognized preprocessing directive
+main.c(81): warning:  #61-D: integer operation result is out of range
+main.c(144): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(226): error:  #20: identifier "bool" is undefined
+main.c(227): warning:  #188-D: enumerated type mixed with another type
+main.c(252): warning:  #174-D: expression has no effect
+main.c(252): error:  #65: expected a ";"
+main.c(288): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(227): warning:  #550-D: variable "dir" was set but never used
+main.c(295): error:  #169: expected a declaration
+main.c(335): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(336): error:  #77-D: this declaration has no storage class or type specifier
+main.c(336): error:  #65: expected a ";"
+main.c(337): error:  #77-D: this declaration has no storage class or type specifier
+main.c(337): error:  #65: expected a ";"
+main.c(338): error:  #77-D: this declaration has no storage class or type specifier
+main.c(338): error:  #65: expected a ";"
+main.c(339): error:  #77-D: this declaration has no storage class or type specifier
+main.c(339): error:  #65: expected a ";"
+main.c(342): error:  #18: expected a ")"
+main.c(342): error:  #79: expected a type specifier
+main.c(342): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(342): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(342): error:  #130: expected a "{"
+main.c(349): warning:  #223-D: function "mapPrint" declared implicitly
+main.c(356): warning:  #1-D: last line of file ends without a newline
+main.c(57): warning:  #177-D: variable "mapBitField" was declared but never referenced
+main.c(70): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(5): error:  #11-D: unrecognized preprocessing directive
+main.c(81): warning:  #61-D: integer operation result is out of range
+main.c(144): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(226): error:  #20: identifier "bool" is undefined
+main.c(227): warning:  #188-D: enumerated type mixed with another type
+main.c(252): warning:  #174-D: expression has no effect
+main.c(252): error:  #65: expected a ";"
+main.c(288): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(227): warning:  #550-D: variable "dir" was set but never used
+main.c(295): error:  #169: expected a declaration
+main.c(335): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(336): error:  #77-D: this declaration has no storage class or type specifier
+main.c(336): error:  #65: expected a ";"
+main.c(337): error:  #77-D: this declaration has no storage class or type specifier
+main.c(337): error:  #65: expected a ";"
+main.c(338): error:  #77-D: this declaration has no storage class or type specifier
+main.c(338): error:  #65: expected a ";"
+main.c(339): error:  #77-D: this declaration has no storage class or type specifier
+main.c(339): error:  #65: expected a ";"
+main.c(342): error:  #18: expected a ")"
+main.c(342): error:  #79: expected a type specifier
+main.c(342): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(342): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(342): error:  #130: expected a "{"
+main.c(349): warning:  #223-D: function "mapPrint" declared implicitly
+main.c(356): warning:  #1-D: last line of file ends without a newline
+main.c(57): warning:  #177-D: variable "mapBitField" was declared but never referenced
+main.c(70): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(226): warning:  #188-D: enumerated type mixed with another type
+main.c(251): warning:  #174-D: expression has no effect
+main.c(251): error:  #65: expected a ";"
+main.c(287): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(225): warning:  #550-D: variable "isMoving" was set but never used
+main.c(226): warning:  #550-D: variable "dir" was set but never used
+main.c(294): error:  #169: expected a declaration
+main.c(334): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(335): error:  #77-D: this declaration has no storage class or type specifier
+main.c(335): error:  #65: expected a ";"
+main.c(336): error:  #77-D: this declaration has no storage class or type specifier
+main.c(336): error:  #65: expected a ";"
+main.c(337): error:  #77-D: this declaration has no storage class or type specifier
+main.c(337): error:  #65: expected a ";"
+main.c(338): error:  #77-D: this declaration has no storage class or type specifier
+main.c(338): error:  #65: expected a ";"
+main.c(341): error:  #18: expected a ")"
+main.c(341): error:  #79: expected a type specifier
+main.c(341): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(341): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(341): error:  #130: expected a "{"
+main.c(348): warning:  #223-D: function "mapPrint" declared implicitly
+main.c(355): warning:  #1-D: last line of file ends without a newline
+main.c(56): warning:  #177-D: variable "mapBitField" was declared but never referenced
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(226): warning:  #188-D: enumerated type mixed with another type
+main.c(252): warning:  #174-D: expression has no effect
+main.c(252): error:  #65: expected a ";"
+main.c(256): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(266): error:  #140: too many arguments in function call
+main.c(268): error:  #165: too few arguments in function call
+main.c(283): warning:  #174-D: expression has no effect
+main.c(283): error:  #65: expected a ";"
+main.c(289): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(319): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(323): warning:  #61-D: integer operation result is out of range
+main.c(357): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(226): warning:  #188-D: enumerated type mixed with another type
+main.c(266): error:  #140: too many arguments in function call
+main.c(268): error:  #165: too few arguments in function call
+main.c(319): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(323): warning:  #61-D: integer operation result is out of range
+main.c(357): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(226): warning:  #188-D: enumerated type mixed with another type
+main.c(269): error:  #140: too many arguments in function call
+main.c(271): error:  #165: too few arguments in function call
+main.c(324): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(328): warning:  #61-D: integer operation result is out of range
+main.c(362): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(226): warning:  #188-D: enumerated type mixed with another type
+main.c(325): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(329): warning:  #61-D: integer operation result is out of range
+main.c(363): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6700 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(325): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(329): warning:  #61-D: integer operation result is out of range
+main.c(365): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6672 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(325): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(329): warning:  #61-D: integer operation result is out of range
+main.c(365): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6664 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Rebuild target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling ece_spi.c...
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling led.c...
+compiling Retarget.c...
+compiling RTX_config.c...
+compiling uart.c...
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(325): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(329): warning:  #61-D: integer operation result is out of range
+main.c(365): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6664 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(325): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(329): warning:  #61-D: integer operation result is out of range
+main.c(365): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6672 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(325): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(329): warning:  #61-D: integer operation result is out of range
+main.c(365): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6668 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(145): error:  #29: expected an expression
+main.c(146): error:  #29: expected an expression
+main.c(165): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(351): warning:  #61-D: integer operation result is out of range
+main.c(387): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(145): error:  #29: expected an expression
+main.c(146): error:  #29: expected an expression
+main.c(165): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(351): warning:  #61-D: integer operation result is out of range
+main.c(387): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(144): error:  #29: expected an expression
+main.c(146): error:  #29: expected an expression
+main.c(151): error:  #169: expected a declaration
+main.c(213): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(214): error:  #169: expected a declaration
+main.c(318): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(319): error:  #77-D: this declaration has no storage class or type specifier
+main.c(319): error:  #65: expected a ";"
+main.c(320): error:  #169: expected a declaration
+main.c(323): error:  #169: expected a declaration
+main.c(365): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(366): error:  #77-D: this declaration has no storage class or type specifier
+main.c(366): error:  #65: expected a ";"
+main.c(367): error:  #77-D: this declaration has no storage class or type specifier
+main.c(367): error:  #65: expected a ";"
+main.c(368): error:  #77-D: this declaration has no storage class or type specifier
+main.c(368): error:  #65: expected a ";"
+main.c(369): error:  #77-D: this declaration has no storage class or type specifier
+main.c(369): error:  #65: expected a ";"
+main.c(372): error:  #18: expected a ")"
+main.c(372): error:  #79: expected a type specifier
+main.c(372): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(372): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(372): error:  #130: expected a "{"
+main.c(379): warning:  #223-D: function "mapPrint" declared implicitly
+main.c(380): warning:  #223-D: function "tankPrint" declared implicitly
+main.c(381): warning:  #223-D: function "tankMove" declared implicitly
+main.c(388): warning:  #1-D: last line of file ends without a newline
+main.c(56): warning:  #177-D: variable "mapBitField" was declared but never referenced
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(144): error:  #29: expected an expression
+main.c(145): error:  #29: expected an expression
+main.c(165): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(351): warning:  #61-D: integer operation result is out of range
+main.c(387): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(133): warning:  #177-D: variable "i" was declared but never referenced
+main.c(134): warning:  #177-D: variable "j" was declared but never referenced
+main.c(161): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(343): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(347): warning:  #61-D: integer operation result is out of range
+main.c(383): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6704 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(144): error:  #29: expected an expression
+main.c(134): warning:  #177-D: variable "j" was declared but never referenced
+main.c(163): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(345): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(349): warning:  #61-D: integer operation result is out of range
+main.c(385): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(165): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(351): warning:  #61-D: integer operation result is out of range
+main.c(387): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6732 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(165): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(351): warning:  #61-D: integer operation result is out of range
+main.c(395): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6780 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Rebuild target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling ece_spi.c...
+compiling GLCD_Scroll.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling led.c...
+compiling Retarget.c...
+compiling RTX_config.c...
+compiling uart.c...
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(165): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(351): warning:  #61-D: integer operation result is out of range
+main.c(395): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6780 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(168): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(350): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(354): warning:  #61-D: integer operation result is out of range
+main.c(398): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6792 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(168): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(350): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(354): warning:  #61-D: integer operation result is out of range
+main.c(398): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6792 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(168): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(350): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(354): warning:  #61-D: integer operation result is out of range
+main.c(394): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6736 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(172): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(354): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(358): warning:  #61-D: integer operation result is out of range
+main.c(398): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6780 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: Code=6780 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(172): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(354): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(358): warning:  #61-D: integer operation result is out of range
+main.c(398): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6780 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(169): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(351): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(355): warning:  #61-D: integer operation result is out of range
+main.c(395): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6760 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(80): warning:  #61-D: integer operation result is out of range
+main.c(174): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(356): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(360): warning:  #61-D: integer operation result is out of range
+main.c(400): warning:  #1-D: last line of file ends without a newline
+main.c(69): warning:  #177-D: variable "direct" was declared but never referenced
+linking...
+Program Size: Code=6780 RO-data=6656 RW-data=56 ZI-data=8336  
+"MinefieldGame.axf" - 0 Error(s), 6 Warning(s).
+Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.

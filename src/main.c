@@ -59,7 +59,7 @@ static const uint32_t mapBitField[20] = {
 };
 
 // Unscoped enum type
-typedef enum Directions {
+typedef enum Directions { 
 	UP = 0,
 	RIGHT = 1,
 	LEFT = 2,
@@ -127,6 +127,37 @@ void blockPrint(int x, int y){
 	}
 }
 
+/*Prints a 16 pixel mine with parameters 
+  as X and Y which represent scaled co-ordinates */
+void minePrint(int x, int y){
+	int i = 0;
+	int j = 0;
+	
+	//set block color
+	GLCD_SetTextColor(map.mapBlockColor);
+	
+	//scale the coordinates
+	x = x*(map.scaleFactor);
+	y = y*(map.scaleFactor);
+	
+	//print the mine
+	for (i=8;i >= -8;i-=2)  {	
+			for (j=-8;j <= 8;j++)  {
+				
+				if(i*i+j*j == 16)
+				{
+					GLCD_PutPixel(i+x, j+y);
+					GLCD_PutPixel(i+x+1, j+y);
+					GLCD_PutPixel(i+x, j+y+1);
+					GLCD_PutPixel(i+x-1, j+y);
+					GLCD_PutPixel(i+x, j+y-1);
+				}
+					
+			 }
+  }
+}
+
+
 /*Clears a 16 pixel square block with parameters 
   as X and Y which represent scaled co-ordinates */
 void blockClear(int x, int y){
@@ -138,8 +169,8 @@ void blockClear(int x, int y){
 	y = y*(map.scaleFactor);
 	
 	//clearing the block
-	for(i=x;i<(x+(map.scaleFactor)-1);i++) {
-		for(j=y;j<(y+(map.scaleFactor)-1);j++) {
+	for(i=x;i<(x+(map.scaleFactor));i++) {
+		for(j=y;j<(y+(map.scaleFactor));j++) {
 			GLCD_RemovePixel(i, j);
 		}
 	}
@@ -157,28 +188,28 @@ void tankPrint(int x, int y, Directions dir) {
 	
 	//print tank body
 	GLCD_SetTextColor(map.tankBodyColor);
-	if(dir == UP) {
+	if(dir == LEFT) {
 		for(i=x;i<(x+(map.scaleFactor)-1);i++) {
 			for(j=(y+((map.scaleFactor)/4)); j<(y+(map.scaleFactor)-1); j++) {
 				GLCD_PutPixel(i,j);
 			}
 		}
 	}
-	else if(dir == DOWN) {
+	else if(dir == RIGHT) {
 		for(i=x; i<x+((map.scaleFactor)-1); i++) {
 			for(j=y; j<y+(((map.scaleFactor)/4)*3); j++) {
 				GLCD_PutPixel(i,j);
 			}
 		}
 	}
-	else if(dir == RIGHT) {
+	else if(dir == UP) {
 		for(i=x; i<x+(((map.scaleFactor)/4)*3); i++) {
 			for(j=y; j<y+(map.scaleFactor); j++) {
 				GLCD_PutPixel(i,j);
 			}
 		}
 	}
-	else if(dir == LEFT) {
+	else if(dir == DOWN) {
 		for(i=x+((map.scaleFactor)/4); i<x+(map.scaleFactor); i++) {
 			for(j=y; j<y+(map.scaleFactor); j++) {
 				GLCD_PutPixel(i,j);
@@ -188,28 +219,28 @@ void tankPrint(int x, int y, Directions dir) {
 	
 	//print tank nose
 	GLCD_SetTextColor(map.tankNoseColor);
-	if(dir == UP) {
+	if(dir == LEFT) {
 		for(i=(x+((map.scaleFactor)/4)); i<(x+(((map.scaleFactor)/4)*3)); i++) {
 			for(j=y; j<(y+4);j++) {
 				GLCD_PutPixel(i,j);
 			}
 		}
 	}
-	else if(dir == DOWN) {
+	else if(dir == RIGHT) {
 		for(i=(x+((map.scaleFactor)/4)); i<(x+(((map.scaleFactor)/4)*3)); i++) {
 			for(j=y+(((map.scaleFactor)/4)*3); j<y+(map.scaleFactor); j++) {
 				GLCD_PutPixel(i,j);
 			}
 		}
 	}
-	else if(dir == RIGHT) {
+	else if(dir == UP) {
 		for(i=x+(((map.scaleFactor)/4)*3); i<x+(map.scaleFactor); i++) {
 			for(j=y+((map.scaleFactor)/4); j<y+((((map.scaleFactor)/4)*3)); j++) {
 				GLCD_PutPixel(i,j);
 			}
 		}
 	}
-	else if(dir == LEFT) {
+	else if(dir == DOWN) {
 		for(i=x; i<x+((map.scaleFactor)/4); i++) {
 			for(j=y+((map.scaleFactor)/4); j<y+((((map.scaleFactor)/4)*3)); j++) {
 				GLCD_PutPixel(i,j);
@@ -218,49 +249,87 @@ void tankPrint(int x, int y, Directions dir) {
 	}
 }
 
-void Tankmove(void) {
+//0 is up, 1 is right, 2 is left and 3 is down
+void tankMove(int tankX, int tankY, Directions dir) {
 	//VARIABLES
 	uint32_t buffer = 0;
-	int tankX = 0;
-	int tankY = 0;
+	int isMoving = 0;
 	
-	//Read from GPIO1
-	buffer |= LPC_GPIO1->FIOPIN;
-	
-	//UP
-	if((buffer & BIT23) == 0) {
-		blockClear(tankX,tankY);
-		tankY = tankY+1;
-		blockPrint(tankX,tankY);
+	while(1){
+			
+		//If Joy stick is pressed the tank moves is the direction its pointing to
+		buffer = 0;
+		buffer |= LPC_GPIO1->FIOPIN;
+		if((buffer & BIT20) == 0)
+			isMoving = 1;
 		
-  }
-	//Right
-	else if((buffer & BIT24) == 0) {
-		blockClear(tankX,tankY);
-		tankY = tankY+1;
-		blockPrint(tankX,tankY);
-	}
-	//Down
-	else if((buffer & BIT25) == 0) {
-		blockClear(tankX,tankY);
-		tankY = tankY+1;
-		blockPrint(tankX,tankY);
-	}
-	//Left
-	else if((buffer & BIT26) == 0) {
-		blockClear(tankX,tankY);
-		tankY = tankY+1;
-		blockPrint(tankX,tankY);
-	}
-	else
-		printf("NO DIR");
-	printf("\r");
-	
-	if((buffer & BIT20) == 0)
-		printf("Pressed");
-	else
-		printf("Not Pressed");
-	printf("\r\r");
+		//If the tank is stationary the tank is allowed to change direction
+		if(isMoving == 0){
+			
+			buffer = 0;	
+			buffer |= LPC_GPIO1->FIOPIN;
+			//Left
+			if((buffer & BIT23) == 0) {
+				dir = LEFT;
+			}
+			//Up 
+			else if((buffer & BIT24) == 0) {
+				dir = UP;	
+			}
+			//Right
+			else if((buffer & BIT25) == 0) {
+				dir = RIGHT;
+			}
+			//Down
+			else if((buffer & BIT26) == 0) {
+				dir = DOWN;
+			}
+			else {
+				printf("Error");
+			}
+		}
+			
+		//Read from GPIO1
+		while(isMoving){
+		
+			buffer = 0;	
+			buffer |= LPC_GPIO1->FIOPIN;
+			//Left
+			if(dir == LEFT) {
+				blockClear(tankX,tankY);
+				tankY = tankY-1;
+				tankPrint(tankX,tankY,LEFT);	
+			}
+			//Up 
+			else if(dir == UP) {
+				blockClear(tankX,tankY);
+				tankX = tankX+1;
+				tankPrint(tankX,tankY,UP);	
+			}
+			//Right
+			else if(dir == RIGHT) {
+				blockClear(tankX,tankY);
+				tankY = tankY+1;
+				tankPrint(tankX,tankY,RIGHT);		
+			}
+			//Down
+			else if (dir == DOWN) {
+				blockClear(tankX,tankY);
+				tankX = tankX-1;
+				tankPrint(tankX,tankY,DOWN);	
+			}
+			else {
+				printf("Error");
+			}
+			
+			//If stop button is pressed, the tank stops
+			buffer =0;
+			buffer |= LPC_GPIO2->FIOPIN;
+			if((buffer & BIT10) == 0)
+				isMoving = 0;
+				
+		}
+	}	
 }
 
 void mapPrint(void) {
@@ -316,10 +385,16 @@ int main(void) {
 	initialization();
 	
 	mapPrint();
-	tankPrint(0,0,UP);
+	
+	minePrint(1,1);
+	
+	
+	//tankPrint(0,0,LEFT);
+	//tankMove(0,0, LEFT);
+	/*
 	tankPrint(0,2,DOWN);
 	tankPrint(0,4,LEFT);
 	tankPrint(0,6,RIGHT);
-	
+	*/
 	while(1) {}
 }

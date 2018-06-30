@@ -1,5 +1,0 @@
--c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork 
--I c:\Software\Keil\ARM\RV31\INC 
--I c:\Software\Keil\ARM\CMSIS\Include 
--I c:\Software\Keil\ARM\Inc\NXP\LPC17xx 
--D__RTGT_UART -o "ece_spi.o" --omf_browse "ece_spi.crf" --depend "ece_spi.d" "ece_spi.c"
