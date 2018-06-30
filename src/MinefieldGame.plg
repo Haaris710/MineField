@@ -3,391 +3,440 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-N:\GitProjects\MineField\src\MinefieldGame.uvproj
+N:\Program Files\MineField\src\MinefieldGame.uvproj
 Project File Date:  06/29/2018
 
 <h2>Output:</h2>
 Build target 'Target 1'
 compiling ece_spi.c...
-ece_spi.c(6): error:  #5: cannot open source input file "ECE_SPI.h": No such file or directory
 compiling GLCD_Scroll.c...
 compiling GLCD_SPI_LPC1700.c...
 compiling led.c...
 compiling Retarget.c...
 compiling uart.c...
 compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(71): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(75): warning:  #61-D: integer operation result is out of range
-main.c(109): warning:  #1-D: last line of file ends without a newline
-main.c(31): warning:  #177-D: variable "map" was declared but never referenced
-Target not created
-Build target 'Target 1'
-compiling ece_spi.c...
-linking...
-Program Size: Code=5276 RO-data=6548 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 0 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=5276 RO-data=6548 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(71): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(75): warning:  #61-D: integer operation result is out of range
-main.c(109): warning:  #1-D: last line of file ends without a newline
-main.c(31): warning:  #177-D: variable "map" was declared but never referenced
-linking...
-Program Size: Code=5244 RO-data=6548 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(71): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(75): warning:  #61-D: integer operation result is out of range
-main.c(109): warning:  #1-D: last line of file ends without a newline
-main.c(31): warning:  #177-D: variable "map" was declared but never referenced
-linking...
-Program Size: Code=5244 RO-data=6548 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(71): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(75): warning:  #61-D: integer operation result is out of range
-main.c(109): warning:  #1-D: last line of file ends without a newline
-main.c(31): warning:  #177-D: variable "map" was declared but never referenced
-linking...
-Program Size: Code=5244 RO-data=6548 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(71): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(75): warning:  #61-D: integer operation result is out of range
-main.c(109): warning:  #1-D: last line of file ends without a newline
-main.c(31): warning:  #177-D: variable "map" was declared but never referenced
-linking...
-Program Size: Code=5276 RO-data=6548 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(71): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(75): warning:  #61-D: integer operation result is out of range
-main.c(109): warning:  #1-D: last line of file ends without a newline
-main.c(31): warning:  #177-D: variable "map" was declared but never referenced
-linking...
-Program Size: Code=5276 RO-data=6548 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(92): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(96): warning:  #61-D: integer operation result is out of range
-main.c(124): warning:  #1-D: last line of file ends without a newline
-main.c(31): warning:  #177-D: variable "map" was declared but never referenced
-linking...
-Program Size: Code=5290 RO-data=6550 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(78): error:  #109: expression must have (pointer-to-) function type
-main.c(84): error:  #109: expression must have (pointer-to-) function type
-main.c(110): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(114): warning:  #61-D: integer operation result is out of range
-main.c(142): warning:  #1-D: last line of file ends without a newline
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(101): error:  #20: identifier "Brown" is undefined
+main.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(120): warning:  #61-D: integer operation result is out of range
+main.c(150): warning:  #1-D: last line of file ends without a newline
 Target not created
 Build target 'Target 1'
 compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(78): error:  #109: expression must have (pointer-to-) function type
-main.c(84): error:  #109: expression must have (pointer-to-) function type
-main.c(110): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(114): warning:  #61-D: integer operation result is out of range
-main.c(142): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(78): error:  #109: expression must have (pointer-to-) function type
-main.c(84): error:  #109: expression must have (pointer-to-) function type
-main.c(110): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(114): warning:  #61-D: integer operation result is out of range
-main.c(142): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(76): error:  #20: identifier "buffer" is undefined
-main.c(77): error:  #65: expected a ";"
-main.c(89): warning:  #12-D: parsing restarts here after previous syntax error
-main.c(72): warning:  #177-D: variable "j" was declared but never referenced
-main.c(110): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(114): warning:  #61-D: integer operation result is out of range
-main.c(142): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(76): error:  #20: identifier "buffer" is undefined
-main.c(110): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(114): warning:  #61-D: integer operation result is out of range
-main.c(142): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(73): error:  #20: identifier "uint32" is undefined
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(143): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(143): warning:  #1-D: last line of file ends without a newline
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(120): warning:  #61-D: integer operation result is out of range
+main.c(150): warning:  #1-D: last line of file ends without a newline
 linking...
 Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
 "MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
 Erase Done.
 Programming Done.
 Verify OK.
 Build target 'Target 1'
 compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(143): warning:  #1-D: last line of file ends without a newline
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(120): warning:  #61-D: integer operation result is out of range
+main.c(152): warning:  #1-D: last line of file ends without a newline
+main.c(152): error:  #127: expected a statement
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(120): warning:  #61-D: integer operation result is out of range
+main.c(152): warning:  #1-D: last line of file ends without a newline
 linking...
 Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
 "MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
 Erase Done.
 Programming Done.
 Verify OK.
 Build target 'Target 1'
 compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(143): warning:  #1-D: last line of file ends without a newline
-main.c(143): error:  #65: expected a ";"
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(120): warning:  #61-D: integer operation result is out of range
+main.c(152): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(120): warning:  #61-D: integer operation result is out of range
+main.c(152): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(120): warning:  #61-D: integer operation result is out of range
+main.c(153): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(120): warning:  #61-D: integer operation result is out of range
+main.c(153): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(120): warning:  #61-D: integer operation result is out of range
+main.c(153): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(120): warning:  #61-D: integer operation result is out of range
+main.c(153): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(147): warning:  #61-D: integer operation result is out of range
+main.c(180): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(51): warning:  #61-D: integer operation result is out of range
+main.c(143): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(147): warning:  #61-D: integer operation result is out of range
+main.c(180): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5358 RO-data=6590 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(195): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5358 RO-data=6590 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(195): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5358 RO-data=6590 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(196): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(189): error:  #268: declaration may not appear after executable statement in block
+main.c(205): warning:  #1-D: last line of file ends without a newline
 Target not created
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
 _____^
 *** error 56: cannot open file
 Build target 'Target 1'
 compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(143): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(144): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(144): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(144): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(144): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(144): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Build target 'Target 1'
-linking...
-Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(144): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(144): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5390 RO-data=6590 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(145): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(145): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5374 RO-data=6590 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(115): warning:  #61-D: integer operation result is out of range
-main.c(145): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(112): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(116): warning:  #61-D: integer operation result is out of range
-main.c(146): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(112): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(116): warning:  #61-D: integer operation result is out of range
-main.c(146): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=5372 RO-data=6588 RW-data=44 ZI-data=8324  
-"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
-Load "N:\\GitProjects\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(49): warning:  #61-D: integer operation result is out of range
-main.c(97): error:  #20: identifier "Brown" is undefined
-main.c(112): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(116): warning:  #61-D: integer operation result is out of range
-main.c(146): warning:  #1-D: last line of file ends without a newline
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(189): error:  #268: declaration may not appear after executable statement in block
+main.c(205): warning:  #1-D: last line of file ends without a newline
 Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(189): error:  #268: declaration may not appear after executable statement in block
+main.c(205): warning:  #1-D: last line of file ends without a newline
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(205): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5428 RO-data=6588 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(207): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5440 RO-data=6588 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(207): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5440 RO-data=6588 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(207): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5440 RO-data=6588 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(66): warning:  #61-D: integer operation result is out of range
+main.c(158): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(162): warning:  #61-D: integer operation result is out of range
+main.c(207): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=5440 RO-data=6588 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 4 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(68): error:  #65: expected a ";"
+main.c(198): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(199): error:  #77-D: this declaration has no storage class or type specifier
+main.c(199): error:  #65: expected a ";"
+main.c(200): error:  #77-D: this declaration has no storage class or type specifier
+main.c(200): error:  #65: expected a ";"
+main.c(201): error:  #77-D: this declaration has no storage class or type specifier
+main.c(201): error:  #65: expected a ";"
+main.c(202): error:  #77-D: this declaration has no storage class or type specifier
+main.c(202): error:  #65: expected a ";"
+main.c(205): error:  #18: expected a ")"
+main.c(205): error:  #79: expected a type specifier
+main.c(205): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(205): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(205): error:  #130: expected a "{"
+main.c(211): warning:  #223-D: function "initialization" declared implicitly
+main.c(213): warning:  #223-D: function "printMap" declared implicitly
+main.c(216): warning:  #1-D: last line of file ends without a newline
+main.c(210): warning:  #177-D: variable "i" was declared but never referenced
+main.c(48): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(73): warning:  #61-D: integer operation result is out of range
+main.c(181): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(185): warning:  #61-D: integer operation result is out of range
+main.c(216): warning:  #1-D: last line of file ends without a newline
+main.c(210): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=5426 RO-data=6630 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(68): error:  #65: expected a ";"
+main.c(198): warning:  #12-D: parsing restarts here after previous syntax error
+main.c(199): error:  #77-D: this declaration has no storage class or type specifier
+main.c(199): error:  #65: expected a ";"
+main.c(200): error:  #77-D: this declaration has no storage class or type specifier
+main.c(200): error:  #65: expected a ";"
+main.c(201): error:  #77-D: this declaration has no storage class or type specifier
+main.c(201): error:  #65: expected a ";"
+main.c(202): error:  #77-D: this declaration has no storage class or type specifier
+main.c(202): error:  #65: expected a ";"
+main.c(205): error:  #18: expected a ")"
+main.c(205): error:  #79: expected a type specifier
+main.c(205): error:  #101: "LPC_GPIO_TypeDef" has already been declared in the current scope
+main.c(205): error:  #141-D: unnamed prototyped parameters not allowed when body is present
+main.c(205): error:  #130: expected a "{"
+main.c(211): warning:  #223-D: function "initialization" declared implicitly
+main.c(213): warning:  #223-D: function "mapPrint" declared implicitly
+main.c(216): warning:  #1-D: last line of file ends without a newline
+main.c(210): warning:  #177-D: variable "i" was declared but never referenced
+main.c(48): warning:  #177-D: variable "map" was declared but never referenced
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(73): warning:  #61-D: integer operation result is out of range
+main.c(181): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(185): warning:  #61-D: integer operation result is out of range
+main.c(216): warning:  #1-D: last line of file ends without a newline
+main.c(210): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=5426 RO-data=6630 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(73): warning:  #61-D: integer operation result is out of range
+main.c(181): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(185): warning:  #61-D: integer operation result is out of range
+main.c(216): warning:  #1-D: last line of file ends without a newline
+main.c(210): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=5426 RO-data=6630 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(73): warning:  #61-D: integer operation result is out of range
+main.c(181): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(185): warning:  #61-D: integer operation result is out of range
+main.c(216): warning:  #1-D: last line of file ends without a newline
+main.c(210): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=5426 RO-data=6630 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(73): warning:  #61-D: integer operation result is out of range
+main.c(181): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(185): warning:  #61-D: integer operation result is out of range
+main.c(216): warning:  #1-D: last line of file ends without a newline
+main.c(210): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=5426 RO-data=6630 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(44): warning:  #61-D: integer operation result is out of range
+main.c(152): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(156): warning:  #61-D: integer operation result is out of range
+main.c(187): warning:  #1-D: last line of file ends without a newline
+main.c(181): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=5426 RO-data=6630 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(44): warning:  #61-D: integer operation result is out of range
+main.c(152): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(156): warning:  #61-D: integer operation result is out of range
+main.c(187): warning:  #1-D: last line of file ends without a newline
+main.c(181): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=5426 RO-data=6630 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(44): warning:  #61-D: integer operation result is out of range
+main.c(101): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(105): warning:  #61-D: integer operation result is out of range
+main.c(136): warning:  #1-D: last line of file ends without a newline
+main.c(130): warning:  #177-D: variable "i" was declared but never referenced
+linking...
+Program Size: Code=5342 RO-data=6630 RW-data=44 ZI-data=8324  
+"MinefieldGame.axf" - 0 Error(s), 5 Warning(s).
+Load "N:\\Program Files\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
