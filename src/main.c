@@ -204,8 +204,8 @@ int main(void) {
 	
 	mapPrint();
 	blockPrint(0,0);
-	//tankMove(0,0);
-	blockClear(0,0);
+	tankMove(0,0);
+	
 	while(1) {
 	
 	}
