@@ -664,6 +664,40 @@ void GLCD_PutPixel (unsigned int x, unsigned int y) {
   wr_dat(Color[TXT_COLOR]);
 }
 
+/*******************************************************************************
+* Draw a pixel in foreground color                                             *
+*   Parameter:      x:        horizontal position                              *
+*                   y:        vertical position                                *
+*   Return:                                                                    *
+*******************************************************************************/
+
+void GLCD_RemovePixel (unsigned int x, unsigned int y) {
+
+  if (Himax) {
+    wr_reg(0x02, x >>    8);            /* Column address start MSB           */
+    wr_reg(0x03, x &  0xFF);            /* Column address start LSB           */
+    wr_reg(0x04, x >>    8);            /* Column address end MSB             */
+    wr_reg(0x05, x &  0xFF);            /* Column address end LSB             */
+  
+    wr_reg(0x06, y >>    8);            /* Row address start MSB              */
+    wr_reg(0x07, y &  0xFF);            /* Row address start LSB              */
+    wr_reg(0x08, y >>    8);            /* Row address end MSB                */
+    wr_reg(0x09, y &  0xFF);            /* Row address end LSB                */
+  }
+  else {
+   #if (LANDSCAPE == 1)
+    wr_reg(0x20, y);
+    wr_reg(0x21, x);
+   #else
+    wr_reg(0x20, x);
+    wr_reg(0x21, y);
+   #endif
+  }
+
+  wr_cmd(0x22);
+  wr_dat(Color[BG_COLOR]);
+}
+
 
 /*******************************************************************************
 * Set foreground color                                                         *
