@@ -21,24 +21,19 @@
 #define TIMEOUT_INDEFINITE (0xffff)
 #define LED_ALL_G1 (BIT28 | BIT29 | BIT31)
 #define LED_ALL_G2 (BIT2 | BIT3 | BIT4 | BIT5 | BIT6)
+#define SCALE_FACTOR 16 //map developed in 16x16 blocks
 
-// Map defined as an array of bit maps (global constant)
 /*
+	Map defined as an array of bit maps (global constant)
+	
 	Map consists of 10, 32-bit numbers representing the vertical
 	columns of pixels on a 1:16 scale. Each bit reprents a pixel
 	as occupied or unoccupied.
 */
-static const uint32_t map[10] = {
-	0x00000000,
-	0x00001F30,
-	0x1F300002,
-	0x000201F0,
-	0xC9F0C9F0,
-	0xC000C000,
-	0xC339C339,
-	0xC3000300,
-	0x13383038,
-	0x00000000
+
+static const uint32_t map[20] = {
+	0,0,0,0x19F0,0x19F0,0x8000,0x8000,0x1F00,0x1F46,0x1F46,0x0006,0x0006,
+	0xF986,0xF986,0x0186,0x0186,0x3990,0x3818,0,0
 };
 
 void ledInit() {
@@ -55,46 +50,40 @@ void ledInit() {
 void blockPrint(int x, int y){
 	int i = 0;
 	int j = 0;
+	
 	//scaling the co-ordinates
-	x = x*16;
-	y = y*16;
+	x = x*SCALE_FACTOR;
+	y = y*SCALE_FACTOR;
+	
 	//printing the block
-	for(i=x;i<(x+16);i++) {
-		for(j=y;j<(y+16);j++) {
+	for(i=x;i<(x+SCALE_FACTOR-1);i++) {
+		for(j=y;j<(y+SCALE_FACTOR-1);j++) {
 			GLCD_PutPixel(i, j);
 		}
 	}
 }
 
-/*Prints the game map utlizing the blockPrint utility */
-void mapPrint(void){
+void mapPrint(void) {
+	//Variables
 	int i=0;
 	int j=0;
-	uint32_t buffer = 0;
+	uint16_t column = 0;
 	
-	//printing map
-	for(i=0;i<10;i++){
-		buffer = map[i];
-			
-		//(Nth) Column
-		for(j=0;j<15;j++){
-			if(buffer & (0x1 << j)){
-				blockPrint((i*2), (j));
-			}
+	for(i=0;i<20;i++) { //20 columns in a 1:16 scale
+		column = map[i];
+		
+		for(j=0;j<15;j++) {
+			if(column & (0x1 << (15-j))) //check if area should be occupied
+				blockPrint(i,j);
 		}
-		//(Nth + 1)  Column
-		for(j=16;j<32;j++){
-			if(buffer & (0x1 << j)){
-				blockPrint(((i*2)+1), (j-16));
-			}
-		}		
 	}
 }
+
 
 void lcdInit() {
 	GLCD_Init();
 	GLCD_Clear(Blue);
-	GLCD_SetBackColor(Brown);
+	GLCD_SetBackColor(Blue);
 	GLCD_SetTextColor(White);
 }
 
@@ -138,9 +127,10 @@ void ledDisplay(uint8_t num) {
 }
 
 int main(void) {
+	int i=0;
 	initialization();
 	
 	mapPrint();
-	//blockPrint(0,0);
-	//blockPrint(19,14);
+	
+	while(1) {}
 }
