@@ -20,7 +20,11 @@
 ### ADS-LD Output File: 'MinefieldGame.axf'
 ### ADS-LD Command File: 'MinefieldGame.lnp'
 ### Checking for dirty Components...
+<<<<<<< HEAD
 ### Creating CmdFile 'MinefieldGame.lnp', Handle=0x000007E4
+=======
+### Creating CmdFile 'MinefieldGame.lnp', Handle=0x00000670
+>>>>>>> mines_sim1
 ### Writing '.lnp' file
 ### ADS-LD Command file 'MinefieldGame.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.

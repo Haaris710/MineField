@@ -5,7 +5,7 @@
 #include <rtl.h>
 #include "GLCD.h"
 
-// To improve readability
+// Bit Masks
 #define BIT0 (0x1)
 #define BIT1 (0x1 << 1)
 #define BIT2 (0x1 << 2)
@@ -27,11 +27,24 @@
 #define BIT29 (0x1 << 29)
 #define BIT30 (0x1 << 30)
 #define BIT31 (0x1 << 31)
-
-#define TIMEOUT_INDEFINITE (0xffff)
 #define LED_ALL_G1 (BIT28 | BIT29 | BIT31)
 #define LED_ALL_G2 (BIT2 | BIT3 | BIT4 | BIT5 | BIT6)
-#define SCALE_FACTOR 16 //map developed in 16x16 blocks
+
+// Improves readability
+#define TIMEOUT_INDEFINITE (0xffff)
+
+//////////////////////////////////////////////////////////////////////////
+//													MAP CHARACTERISTICS													//
+//////////////////////////////////////////////////////////////////////////
+
+struct mapCharacs {
+	uint8_t scaleFactor;
+	uint16_t mapBackColor;
+	uint16_t mapBlockColor;
+	uint16_t tankBodyColor;
+	uint16_t tankNoseColor;
+};
+struct mapCharacs map;
 
 /*
 	Map defined as an array of bit maps (global constant)
@@ -40,11 +53,24 @@
 	columns of pixels on a 1:16 scale. Each bit reprents a pixel
 	as occupied or unoccupied.
 */
-
-static const uint32_t map[20] = {
+static const uint32_t mapBitField[20] = {
 	0,0,0,0x19F0,0x19F0,0x8000,0x8000,0x1F00,0x1F46,0x1F46,0x0006,0x0006,
 	0xF986,0xF986,0x0186,0x0186,0x3990,0x3818,0,0
 };
+
+// Unscoped enum type
+typedef enum Directions {
+	UP = 0,
+	RIGHT = 1,
+	LEFT = 2,
+	DOWN = 3
+}Directions;
+
+static Directions direct;
+
+//////////////////////////////////////////////////////////////////////////
+//											INITIALIZATION FUNCTIONS												//
+//////////////////////////////////////////////////////////////////////////
 
 void ledInit() {
 	//set LEDs to output
@@ -55,19 +81,47 @@ void ledInit() {
 	LPC_GPIO2->FIOCLR |= LED_ALL_G2;
 }
 
+void lcdInit() {
+	GLCD_Init();
+	GLCD_Clear(map.mapBackColor);
+	GLCD_SetBackColor(map.mapBackColor);
+}
+
+void mapCharacsInit() {
+	map.scaleFactor = 16;
+	map.mapBackColor = Black;
+	map.mapBlockColor = Magenta;
+	map.tankBodyColor = Olive;
+	map.tankNoseColor = White;
+}
+
+void initialization() {
+	SystemInit();
+	ledInit();
+	lcdInit();
+	mapCharacsInit();
+}
+
+////////////////////////////////////////////////////////////////////////////
+//														PRINT FUNCTIONS															//
+////////////////////////////////////////////////////////////////////////////
+
 /*Prints a 16 pixel square block with parameters 
   as X and Y which represent scaled co-ordinates */
 void blockPrint(int x, int y){
 	int i = 0;
 	int j = 0;
 	
-	//scaling the co-ordinates
-	x = x*SCALE_FACTOR;
-	y = y*SCALE_FACTOR;
+	//set block color
+	GLCD_SetTextColor(map.mapBlockColor);
 	
-	//printing the block
-	for(i=x;i<(x+SCALE_FACTOR-1);i++) {
-		for(j=y;j<(y+SCALE_FACTOR-1);j++) {
+	//scale the coordinates
+	x = x*(map.scaleFactor);
+	y = y*(map.scaleFactor);
+	
+	//print the block
+	for(i=x;i<(x+(map.scaleFactor)-1);i++) {
+		for(j=y;j<(y+(map.scaleFactor)-1);j++) {
 			GLCD_PutPixel(i, j);
 		}
 	}
@@ -80,17 +134,27 @@ void blockClear(int x, int y){
 	int j = 0;
 	
 	//scaling the co-ordinates
+<<<<<<< HEAD
 	x = x*SCALE_FACTOR;
 	y = y*SCALE_FACTOR;
 	
 	//printing the block
 	for(i=x;i<(x+SCALE_FACTOR-1);i++) {
 		for(j=y;j<(y+SCALE_FACTOR-1);j++) {
+=======
+	x = x*(map.scaleFactor);
+	y = y*(map.scaleFactor);
+	
+	//clearing the block
+	for(i=x;i<(x+(map.scaleFactor)-1);i++) {
+		for(j=y;j<(y+(map.scaleFactor)-1);j++) {
+>>>>>>> mines_sim1
 			GLCD_RemovePixel(i, j);
 		}
 	}
 }
 
+<<<<<<< HEAD
 void tankMove(int tankX, int tankY) {
 	//VARIABLES
 	uint32_t buffer = 0;
@@ -98,6 +162,90 @@ void tankMove(int tankX, int tankY) {
 	//Read from GPIO1
 	buffer |= LPC_GPIO1->FIOPIN;
 	while(1){
+=======
+/* Tank directions defined as: 
+*/
+void tankPrint(int x, int y, Directions dir) {
+	int i=0;
+	int j=0;
+	
+	//scale coordinates
+	x = x*(map.scaleFactor);
+	y = y*(map.scaleFactor);
+	
+	//print tank body
+	GLCD_SetTextColor(map.tankBodyColor);
+	if(dir == UP) {
+		for(i=x;i<(x+(map.scaleFactor)-1);i++) {
+			for(j=(y+((map.scaleFactor)/4)); j<(y+(map.scaleFactor)-1); j++) {
+				GLCD_PutPixel(i,j);
+			}
+		}
+	}
+	else if(dir == DOWN) {
+		for(i=x; i<x+((map.scaleFactor)-1); i++) {
+			for(j=y; j<y+(((map.scaleFactor)/4)*3); j++) {
+				GLCD_PutPixel(i,j);
+			}
+		}
+	}
+	else if(dir == RIGHT) {
+		for(i=x; i<x+(((map.scaleFactor)/4)*3); i++) {
+			for(j=y; j<y+(map.scaleFactor); j++) {
+				GLCD_PutPixel(i,j);
+			}
+		}
+	}
+	else if(dir == LEFT) {
+		for(i=x+((map.scaleFactor)/4); i<x+(map.scaleFactor); i++) {
+			for(j=y; j<y+(map.scaleFactor); j++) {
+				GLCD_PutPixel(i,j);
+			}
+		}
+	}
+	
+	//print tank nose
+	GLCD_SetTextColor(map.tankNoseColor);
+	if(dir == UP) {
+		for(i=(x+((map.scaleFactor)/4)); i<(x+(((map.scaleFactor)/4)*3)); i++) {
+			for(j=y; j<(y+4);j++) {
+				GLCD_PutPixel(i,j);
+			}
+		}
+	}
+	else if(dir == DOWN) {
+		for(i=(x+((map.scaleFactor)/4)); i<(x+(((map.scaleFactor)/4)*3)); i++) {
+			for(j=y+(((map.scaleFactor)/4)*3); j<y+(map.scaleFactor); j++) {
+				GLCD_PutPixel(i,j);
+			}
+		}
+	}
+	else if(dir == RIGHT) {
+		for(i=x+(((map.scaleFactor)/4)*3); i<x+(map.scaleFactor); i++) {
+			for(j=y+((map.scaleFactor)/4); j<y+((((map.scaleFactor)/4)*3)); j++) {
+				GLCD_PutPixel(i,j);
+			}
+		}
+	}
+	else if(dir == LEFT) {
+		for(i=x; i<x+((map.scaleFactor)/4); i++) {
+			for(j=y+((map.scaleFactor)/4); j<y+((((map.scaleFactor)/4)*3)); j++) {
+				GLCD_PutPixel(i,j);
+			}
+		}
+	}
+}
+
+void Tankmove(void) {
+	//VARIABLES
+	uint32_t buffer = 0;
+	int tankX = 0;
+	int tankY = 0;
+	
+	//Read from GPIO1
+	buffer |= LPC_GPIO1->FIOPIN;
+	
+>>>>>>> mines_sim1
 	//UP
 	if((buffer & BIT23) == 0) {
 		blockClear(tankX,tankY);
@@ -132,7 +280,10 @@ void tankMove(int tankX, int tankY) {
 	else
 		printf("Not Pressed");
 	printf("\r\r");
+<<<<<<< HEAD
 	}
+=======
+>>>>>>> mines_sim1
 }
 
 void mapPrint(void) {
@@ -142,27 +293,13 @@ void mapPrint(void) {
 	uint16_t column = 0;
 	
 	for(i=0;i<20;i++) { //20 columns in a 1:16 scale
-		column = map[i];
+		column = mapBitField[i];
 		
 		for(j=0;j<15;j++) {
 			if(column & (0x1 << (15-j))) //check if area should be occupied
 				blockPrint(i,j);
 		}
 	}
-}
-
-
-void lcdInit() {
-	GLCD_Init();
-	GLCD_Clear(Blue);
-	GLCD_SetBackColor(Blue);
-	GLCD_SetTextColor(White);
-}
-
-void initialization() {
-	SystemInit();
-	ledInit();
-	lcdInit();
 }
 
 void ledDisplay(uint8_t num) {
@@ -199,14 +336,20 @@ void ledDisplay(uint8_t num) {
 }
 
 int main(void) {
-	int i=0;
 	initialization();
 	
 	mapPrint();
+<<<<<<< HEAD
 	blockPrint(0,0);
 	tankMove(0,0);
 	
 	while(1) {
+=======
+	tankPrint(0,0,UP);
+	tankPrint(0,2,DOWN);
+	tankPrint(0,4,LEFT);
+	tankPrint(0,6,RIGHT);
+>>>>>>> mines_sim1
 	
 	}
 }

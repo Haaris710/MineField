@@ -3,7 +3,12 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
+<<<<<<< HEAD
 N:\GitProjects\Git\MineField\src\MinefieldGame.uvproj
 Project File Date:  06/30/2018
+=======
+N:\Program Files\Git\MineField\src\MinefieldGame.uvproj
+Project File Date:  06/29/2018
+>>>>>>> mines_sim1
 
 <h2>Output:</h2>
