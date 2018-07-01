@@ -43,6 +43,14 @@ struct mapCharacs {
 	uint16_t mapBlockColor;
 	uint16_t tankBodyColor;
 	uint16_t tankNoseColor;
+	uint16_t minesInvis;
+	uint16_t minesPrimed;
+	uint16_t minesExp;
+	
+	uint16_t minesGreen;
+	uint16_t minesBlue;
+	uint16_t minesYellow;
+	uint16_t minesRed;
 };
 struct mapCharacs map;
 
@@ -54,8 +62,58 @@ struct mapCharacs map;
 	as occupied or unoccupied.
 */
 static const uint32_t mapBitField[20] = {
-	0,0,0,0x19F0,0x19F0,0x8000,0x8000,0x1F00,0x1F46,0x1F46,0x0006,0x0006,
-	0xF986,0xF986,0x0186,0x0186,0x3990,0x3818,0,0
+	0,0,0,0x19F0,0x19F0,0x8000,0x8000,0x1F00,0x1F26,0x1F26,0x0006,0x0006,
+	0xF986,0xF986,0x0186,0x0180,0x3990,0x3818,0,0
+};
+
+typedef enum MineState {
+	INVIS = 0,
+	PRIMED = 1,
+	EXP = 2,
+	T1 = 3,
+	T2 = 4,
+	T3 = 5,
+	T4 = 6
+} MineState;
+
+// Array of four mine sets (0 to 3)
+static MineState mines[4];
+
+static const uint8_t mineSet1X[51] = {
+	0,0,0,0,0,1,1,1,1,2,2,2,2,2,2,2,3,4,5,5,5,6,6,7,7,8,8,9,10,10,10,11,11,
+	11,11,12,12,14,14,15,15,15,15,17,17,18,18,18,19,19,19
+};
+static const uint8_t mineSet1Y[51] = {
+	0,4,7,9,10,3,11,12,13,1,5,6,8,9,13,14,2,13,2,11,13,6,9,1,13,9,12,11,1,
+	4,7,4,6,8,10,10,11,3,4,1,5,9,12,6,14,0,8,11,3,10,14
+};
+
+static const uint8_t mineSet2X[56] = {
+	0,0,0,0,0,0,1,1,1,1,1,2,2,3,3,3,3,3,4,4,5,5,5,6,6,6,6,7,8,8,10,10,10,11,
+	11,11,12,12,13,13,13,14,14,15,15,16,16,17,18,18,18,18,18,19,19,19
+};
+static const uint8_t mineSet2Y[56] = {
+	1,3,5,6,12,13,1,2,7,8,10,4,11,0,5,12,13,14,1,6,3,7,10,3,5,11,12,8,0,2,6,
+	10,12,1,3,7,9,12,5,9,10,2,11,3,14,5,13,0,2,6,9,10,14,6,8,12
+};
+
+static const uint8_t mineSet3X[58] = {
+	0,0,0,0,1,1,1,1,1,1,2,2,2,2,2,2,3,3,4,4,5,5,5,5,5,6,6,6,7,8,9,9,10,10,10,
+	10,11,11,11,13,13,14,14,14,15,15,15,16,17,17,17,18,18,18,18,19,19,19
+};
+static const uint8_t mineSet3Y[58] = {
+	2,8,11,14,0,4,5,6,9,14,0,2,3,7,10,12,1,6,2,5,1,4,5,8,12,2,13,14,9,11,0,9,
+	3,5,8,11,2,9,11,11,12,0,6,10,2,4,11,10,1,5,8,4,7,12,13,1,5,13
+};
+
+static const uint8_t mineSet4X[59] = {
+	4,4,4,5,5,5,6,6,6,6,6,7,7,7,7,7,7,8,8,9,9,9,9,10,10,10,11,11,11,12,12,13,
+	14,14,14,14,15,15,15,15,16,16,16,16,16,16,17,17,17,17,18,18,18,19,19,19,
+	19,19,19
+};
+static const uint8_t mineSet4Y[59] = {
+	0,12,14,6,9,14,1,4,7,8,10,0,2,10,11,12,14,1,8,1,2,8,12,0,2,9,0,5,12,5,6,6,
+	1,5,9,12,0,6,10,13,0,1,6,9,12,14,7,9,10,13,1,3,5,0,2,4,7,9,11
 };
 
 // Unscoped enum type
@@ -67,6 +125,8 @@ typedef enum Directions {
 }Directions;
 
 static Directions direct;
+
+
 
 //////////////////////////////////////////////////////////////////////////
 //											INITIALIZATION FUNCTIONS												//
@@ -93,6 +153,21 @@ void mapCharacsInit() {
 	map.mapBlockColor = Magenta;
 	map.tankBodyColor = Olive;
 	map.tankNoseColor = White;
+	map.minesInvis = Black;
+	map.minesPrimed = White;
+	map.minesExp = Red;
+	
+	map.minesGreen = Green;
+	map.minesBlue = Blue;
+	map.minesYellow = Yellow;
+	map.minesRed = Red;
+}
+
+void mineStatesInit() {
+	int i=0;
+	for(i=0; i<4; i++) {
+		mines[i] = INVIS;
+	}
 }
 
 void initialization() {
@@ -133,12 +208,9 @@ void minePrint(int x, int y){
 	int i = 0;
 	int j = 0;
 	
-	//set block color
-	GLCD_SetTextColor(map.mapBlockColor);
-	
 	//scale the coordinates
-	x = x*(map.scaleFactor);
-	y = y*(map.scaleFactor);
+	x = x*(map.scaleFactor) + (map.scaleFactor/2);
+	y = y*(map.scaleFactor) + (map.scaleFactor/2);
 	
 	//print the mine
 	for (i=8;i >= -8;i-=2)  {	
@@ -155,6 +227,54 @@ void minePrint(int x, int y){
 					
 			 }
   }
+}
+
+
+//Prints a mine set in a given state
+void mineSetPrint(uint8_t setNum, MineState mState) {
+	//variables
+	int i = 0;
+	int j = 0;
+	
+	//store mine state in global array
+	mines[setNum] = mState;
+	
+	//select color
+	if(mState == INVIS)
+		GLCD_SetTextColor(map.minesInvis);
+	else if(mState == PRIMED)
+		GLCD_SetTextColor(map.minesPrimed);
+	else if(mState == EXP)
+		GLCD_SetTextColor(map.minesExp);
+	else if(mState == T1)
+		GLCD_SetTextColor(map.minesGreen);
+	else if(mState == T2)
+		GLCD_SetTextColor(map.minesBlue);
+	else if(mState == T3)
+		GLCD_SetTextColor(map.minesYellow);
+	else if(mState == T4)
+		GLCD_SetTextColor(map.minesRed);
+	
+	if(setNum == 0) {
+		for(i=0; i<51; i++) {
+			minePrint(mineSet1X[i],mineSet1Y[i]);
+		}
+	}
+	else if(setNum == 1) {
+		for(i=0; i<56; i++) {
+			minePrint(mineSet2X[i],mineSet2Y[i]);
+		}
+	}
+	else if(setNum == 2) {
+		for(i=0; i<58; i++) {
+			minePrint(mineSet3X[i],mineSet3Y[i]);
+		}
+	}
+	else if(setNum == 3) {
+		for(i=0; i<59; i++) {
+			minePrint(mineSet4X[i],mineSet4Y[i]);
+		}
+	}
 }
 
 
@@ -385,9 +505,11 @@ int main(void) {
 	initialization();
 	
 	mapPrint();
-	
-	minePrint(1,1);
-	
+	mineSetPrint(0, T1);
+	mineSetPrint(1, T2);
+	mineSetPrint(2, T3);
+	mineSetPrint(3, T4
+	);
 	
 	//tankPrint(0,0,LEFT);
 	//tankMove(0,0, LEFT);
