@@ -41,8 +41,14 @@ OS_MUT lcdMtx;
 __task void mines_task(void);
 
 //////////////////////////////////////////////////////////////////////////
-//													MAP CHARACTERISTICS													//
+//												GAME CHARACTERISTICS													//
 //////////////////////////////////////////////////////////////////////////
+
+struct controlCharacs {
+	uint8_t joyStick[5];
+	uint8_t pushBtn;
+};
+struct controlCharacs controls;
 
 struct mapCharacs {
 	uint8_t scaleFactor;
@@ -189,11 +195,46 @@ void mapCharacsInit() {
 	map.minesRed = Red;
 }
 
-void mineStatesInit() {
+void controlCharacsInit() {
+	//counter variable
 	int i=0;
+	
+	//initiaize all joystick inputs to 'unpressed'
+	for(i=0;i<5;i++)
+		controls.joyStick[i] = 0;
+	
+	//initialize push button to 'unpressed'
+	controls.pushBtn = 0;
+}
+
+void mineStatesInit() {
+	//counter variable
+	int i=0;
+	
+	//initalize all mine sets to invisible state
 	for(i=0; i<4; i++) {
 		mines[i] = INVIS;
 	}
+}
+
+void pushButtonInit() {
+	//set push button connected to GPIO
+	LPC_PINCON->PINSEL4 &= ~(3<<20);
+	//set as input
+	LPC_GPIO2->FIODIR &= ~(1<<10);
+	//setup read on falling edge interrupt
+	LPC_GPIOINT->IO2IntEnF |= (1<<10);
+	//enable IRQ
+	NVIC_EnableIRQ(EINT3_IRQn);
+}
+
+//ISR for push button
+void EINT_IRQHandler(void) {
+	//set push button 'state' to 'pushed'
+	controls.pushBtn = 1;
+	
+	//clear interrupt
+	LPC_GPIOINT->IO2IntClr |= (1<<10);
 }
 
 void initialization() {
@@ -201,6 +242,8 @@ void initialization() {
 	ledInit();
 	lcdInit();
 	mapCharacsInit();
+	controlCharacsInit();
+	pushButtonInit();
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -265,21 +308,28 @@ void mineSetPrint(uint8_t setNum, MineState mState) {
 	//store mine state in global array
 	mines[setNum] = mState;
 	
-	//select color
-	if(mState == INVIS)
-		GLCD_SetTextColor(map.minesInvis);
-	else if(mState == PRIMED)
-		GLCD_SetTextColor(map.minesPrimed);
-	else if(mState == EXP)
-		GLCD_SetTextColor(map.minesExp);
-	else if(mState == T1)
-		GLCD_SetTextColor(map.minesGreen);
-	else if(mState == T2)
-		GLCD_SetTextColor(map.minesBlue);
-	else if(mState == T3)
-		GLCD_SetTextColor(map.minesYellow);
-	else if(mState == T4)
-		GLCD_SetTextColor(map.minesRed);
+	switch(mState) {
+		case INVIS:
+			GLCD_SetTextColor(map.minesInvis);
+			break;
+		case PRIMED:
+			GLCD_SetTextColor(map.minesPrimed);
+			break;
+		case EXP:
+			GLCD_SetTextColor(map.minesExp);
+			break;
+		case T1:
+			GLCD_SetTextColor(map.minesGreen);
+			break;
+		case T2:
+			GLCD_SetTextColor(map.minesBlue);
+			break;
+		case T3:
+			GLCD_SetTextColor(map.minesYellow);
+			break;
+		case T4:
+			GLCD_SetTextColor(map.minesRed);
+	}
 	
 	if(setNum == 0) {
 		for(i=0; i<51; i++) {
@@ -540,13 +590,14 @@ __task void init_tasks(void) {
 
 /*
 	mines_task continuously cycles through each mine set from 
-	INVIS to PRIMED to EXP
+	INVIS to PRIMED to EXP. Mutex lcdMtx used to synchronize
+	usage of lcd print functions
 */
 __task void mines_task(void) {
 	//mine set tracking variable
 	int i=0;
 	
-	//delay between mine transitions
+	//used to control mine state transition speeds
 	os_itv_set(map.minesCycleSpeed);
 	
 	while(1) {
@@ -598,5 +649,5 @@ int main(void) {
 	tankPrint(0,4,LEFT);
 	tankPrint(0,6,RIGHT);
 	*/
-	while(1) {}
+	//while(1) {}
 }
