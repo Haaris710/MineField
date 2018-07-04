@@ -422,8 +422,9 @@ ARM Macro Assembler    Page 7
               00000000 
 Command Line: --debug --xref --cpu=Cortex-M3 --apcs=interwork --depend=startup_
 LPC17xx.d -ostartup_LPC17xx.o -Ic:\Software\Keil\ARM\RV31\INC -Ic:\Software\Kei
-l\ARM\CMSIS\Include -Ic:\Software\Keil\ARM\Inc\NXP\LPC17xx --predefine="__MICRO
-LIB SETA 1" --list=startup_LPC17xx.lst startup_LPC17xx.s
+l\ARM\CMSIS\Include -Ic:\Software\Keil\ARM\Inc\NXP\LPC17xx --predefine="__RTX S
+ETA 1" --predefine="__MICROLIB SETA 1" --list=startup_LPC17xx.lst startup_LPC17
+xx.s
 
 
 
@@ -1057,4 +1058,4 @@ Symbol: __main
       At line 131 in file startup_LPC17xx.s
 Comment: __main used once
 2 symbols
-397 symbols in table
+398 symbols in table
