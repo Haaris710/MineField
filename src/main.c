@@ -32,6 +32,13 @@
 
 // Improves readability
 #define TIMEOUT_INDEFINITE (0xffff)
+#define ONE_SECOND (200)
+
+// SYNCHRONIZATION VARIABLES //
+OS_MUT lcdMtx;
+
+// FUNCTION PROTOTYPES //
+__task void mines_task(void);
 
 //////////////////////////////////////////////////////////////////////////
 //													MAP CHARACTERISTICS													//
@@ -41,12 +48,20 @@ struct mapCharacs {
 	uint8_t scaleFactor;
 	uint16_t mapBackColor;
 	uint16_t mapBlockColor;
+	
+	//tank color characteristics
 	uint16_t tankBodyColor;
 	uint16_t tankNoseColor;
+	
+	//mine characteristics
+	uint16_t minesCycleSpeed;
+	
+	//mine color characteristics
 	uint16_t minesInvis;
 	uint16_t minesPrimed;
 	uint16_t minesExp;
 	
+	//test mine colors
 	uint16_t minesGreen;
 	uint16_t minesBlue;
 	uint16_t minesYellow;
@@ -70,6 +85,8 @@ typedef enum MineState {
 	INVIS = 0,
 	PRIMED = 1,
 	EXP = 2,
+	
+	//Test states
 	T1 = 3,
 	T2 = 4,
 	T3 = 5,
@@ -148,15 +165,24 @@ void lcdInit() {
 }
 
 void mapCharacsInit() {
+	//map characteristics
 	map.scaleFactor = 16;
 	map.mapBackColor = Black;
 	map.mapBlockColor = Magenta;
+	
+	//tank color characteristics
 	map.tankBodyColor = Olive;
 	map.tankNoseColor = White;
+	
+	//mine characteristics
+	map.minesCycleSpeed = ONE_SECOND*2;
+	
+	//mine color characteristics
 	map.minesInvis = Black;
-	map.minesPrimed = White;
+	map.minesPrimed = Yellow;
 	map.minesExp = Red;
 	
+	//test colors for mines
 	map.minesGreen = Green;
 	map.minesBlue = Blue;
 	map.minesYellow = Yellow;
@@ -501,16 +527,70 @@ void ledDisplay(uint8_t num) {
 	buffer = 0;
 }
 
+__task void init_tasks(void) {
+	//initialize mutexes and semaphores
+	os_mut_init(&lcdMtx);
+	
+	//initialize tasks
+	os_tsk_create(mines_task,1);
+	
+	//init_tasks self delete
+	os_tsk_delete_self();
+}
+
+/*
+	mines_task continuously cycles through each mine set from 
+	INVIS to PRIMED to EXP
+*/
+__task void mines_task(void) {
+	//mine set tracking variable
+	int i=0;
+	
+	//delay between mine transitions
+	os_itv_set(map.minesCycleSpeed);
+	
+	while(1) {
+		//Change current mine set to primed state
+		os_mut_wait(&lcdMtx, TIMEOUT_INDEFINITE);
+		mineSetPrint(i,PRIMED);		
+		os_mut_release(&lcdMtx);
+		os_itv_wait();
+		
+		//Change current mine set to exploded state
+		os_mut_wait(&lcdMtx, TIMEOUT_INDEFINITE);
+		mineSetPrint(i,EXP);
+		os_mut_release(&lcdMtx);
+		os_itv_wait();
+		
+		//Change current mine set to inivisible state
+		//Change next mine set to primed state
+		os_mut_wait(&lcdMtx, TIMEOUT_INDEFINITE);
+		mineSetPrint(i,INVIS);
+		if(i==3) mineSetPrint(0,PRIMED);
+			else mineSetPrint(i+1,PRIMED);
+		os_mut_release(&lcdMtx);
+		os_itv_wait();
+		
+		//increment state counter
+		if(i==3) i=0;
+			else i++;
+	}
+}
+
+
+
 int main(void) {
 	initialization();
+	mapPrint();
+	os_sys_init(init_tasks);
 	
+	/*
 	mapPrint();
 	mineSetPrint(0, T1);
 	mineSetPrint(1, T2);
 	mineSetPrint(2, T3);
-	mineSetPrint(3, T4
-	);
-	
+	mineSetPrint(3, T4);
+	*/
 	//tankPrint(0,0,LEFT);
 	//tankMove(0,0, LEFT);
 	/*
