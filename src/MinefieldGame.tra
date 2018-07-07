@@ -20,7 +20,7 @@ c:\Software\Keil\ARM\RV31\LIB\RTX_CM3.LIB --library_type=microlib --strict --sca
 ### ADS-LD Output File: 'MinefieldGame.axf'
 ### ADS-LD Command File: 'MinefieldGame.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile 'MinefieldGame.lnp', Handle=0x00000564
+### Creating CmdFile 'MinefieldGame.lnp', Handle=0x00000E94
 ### Writing '.lnp' file
 ### ADS-LD Command file 'MinefieldGame.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
