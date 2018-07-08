@@ -46,10 +46,15 @@ OS_SEM scoreSem;
 
 OS_MUT dataMTX;
 
+OS_TID tsk1;
+OS_TID tsk2;
+OS_TID tsk3;
+OS_TID tsk4;
+OS_TID tsk5;
+
 // FUNCTION PROTOTYPES //
 __task void mines_task(void);
 __task void tank_task(void);
-__task void joy_task(void);
 __task void coll_task(void);
 __task void display_task(void);
 __task void score_task(void);
@@ -86,6 +91,12 @@ struct mapCharacs {
 	uint16_t minesBlue;
 	uint16_t minesYellow;
 	uint16_t minesRed;
+	
+	//score characteristics
+	uint16_t scoreCycleSpeed;
+	
+	//tank characteristics
+	uint16_t tankRefreshRate;
 };
 struct mapCharacs map;
 
@@ -223,6 +234,12 @@ void mapCharacsInit() {
 	map.minesBlue = Blue;
 	map.minesYellow = Yellow;
 	map.minesRed = Red;
+	
+	//score characteristics
+	map.scoreCycleSpeed = map.minesCycleSpeed*5;
+	
+	//tank characteristics
+	map.tankRefreshRate = map.minesCycleSpeed/20;
 }
 
 void gameCharacsInit() {
@@ -607,12 +624,12 @@ __task void init_tasks(void) {
 	os_mut_init(&dataMTX);
 	
 	//initialize tasks
-	os_tsk_create(mines_task,1);
-	os_tsk_create(tank_task,1);
+	tsk1 = os_tsk_create(mines_task,1);
+	tsk2 = os_tsk_create(tank_task,1);
 	//os_tsk_create(joy_task,1);
-	os_tsk_create(coll_task,1);
-	os_tsk_create(display_task,1);
-	os_tsk_create(score_task,1);
+	tsk3 = os_tsk_create(coll_task,1);
+	tsk4 = os_tsk_create(display_task,1);
+	tsk5 = os_tsk_create(score_task,1);
 	
 	//init_tasks self delete
 	os_tsk_delete_self();
@@ -728,7 +745,7 @@ __task void joy_task(void) {
 //updates tank position data
 __task void tank_task(void) {
 	uint8_t state = 0;
-	os_itv_set(map.minesCycleSpeed/20);
+	os_itv_set(map.tankRefreshRate);
 	
 	while(1) {
 		os_mut_wait(&dataMTX, TIMEOUT_INDEFINITE);
@@ -849,6 +866,10 @@ __task void coll_task(void) {
 //Uses tank data and mine data to print display
 __task void display_task(void) {
 	int i=0;
+	char* endMessage;
+	char endScore[20];
+	
+	endMessage = "GAME OVER";
 	
 	//print tank starting position
 	tankPrint(tank.xCur, tank.yCur, tank.dirCur);
@@ -858,7 +879,19 @@ __task void display_task(void) {
 		
 		//check for gameOver
 		if(game.gameOver) {
-			tankPrint(5,5,DOWN);
+			snprintf(endScore, 20, "Your score: %d", game.score);
+			GLCD_Clear(Red);
+			GLCD_SetBackColor(Red);
+			GLCD_SetTextColor(Black);
+			GLCD_DisplayString(5,1,1, endMessage);
+			GLCD_DisplayString(6,1,1, endScore);
+			
+			//delete tasks
+			os_tsk_delete(tsk1);
+			os_tsk_delete(tsk2);
+			os_tsk_delete(tsk3);
+			os_tsk_delete(tsk5);
+			break;
 		}
 		
 		//print mines if state changed
@@ -887,7 +920,7 @@ __task void display_task(void) {
 }
 
 __task void score_task(void) {
-	os_itv_set(map.minesCycleSpeed*5);
+	os_itv_set(map.scoreCycleSpeed);
 	while(1) {
 		os_sem_wait(&scoreSem, TIMEOUT_INDEFINITE);
 		
