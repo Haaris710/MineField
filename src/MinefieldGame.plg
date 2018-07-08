@@ -9,821 +9,6 @@ Project File Date:  07/04/2018
 <h2>Output:</h2>
 Build target 'Target 1'
 compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(591): error:  #20: identifier "tankDataMtx" is undefined
-main.c(641): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(645): warning:  #61-D: integer operation result is out of range
-main.c(672): error:  #20: identifier "lcdMtx" is undefined
-main.c(673): error:  #20: identifier "mineDataMtx" is undefined
-main.c(689): error:  #20: identifier "tankDataMtx" is undefined
-main.c(716): error:  #20: identifier "mineDataMtx" is undefined
-main.c(749): error:  #20: identifier "tankDataMtx" is undefined
-main.c(746): warning:  #177-D: variable "output" was declared but never referenced
-main.c(792): error:  #20: identifier "tankDataMtx" is undefined
-main.c(800): error:  #20: identifier "mineDataMtx" is undefined
-main.c(839): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(669): error:  #55-D: too many arguments in invocation of macro "os_mut_init"
-main.c(739): warning:  #177-D: variable "output" was declared but never referenced
-main.c(824): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(739): warning:  #177-D: variable "output" was declared but never referenced
-main.c(824): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=10620 RO-data=7076 RW-data=164 ZI-data=12524  
-"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(758): warning:  #177-D: variable "output" was declared but never referenced
-main.c(843): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=10820 RO-data=7076 RW-data=164 ZI-data=12524  
-"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(700): error:  #20: identifier "mineSem" is undefined
-main.c(737): warning:  #177-D: variable "output" was declared but never referenced
-main.c(827): error:  #20: identifier "mineSem" is undefined
-main.c(852): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(700): error:  #20: identifier "mineSem" is undefined
-main.c(737): warning:  #177-D: variable "output" was declared but never referenced
-main.c(852): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(737): warning:  #177-D: variable "output" was declared but never referenced
-main.c(852): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=10816 RO-data=7076 RW-data=164 ZI-data=12524  
-"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(715): error:  #20: identifier "mines" is undefined
-main.c(715): error:  #165: too few arguments in function call
-main.c(715): error:  #18: expected a ")"
-main.c(736): warning:  #177-D: variable "output" was declared but never referenced
-main.c(851): warning:  #1-D: last line of file ends without a newline
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(734): warning:  #177-D: variable "output" was declared but never referenced
-main.c(849): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=10784 RO-data=7076 RW-data=164 ZI-data=12524  
-"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(734): warning:  #177-D: variable "output" was declared but never referenced
-main.c(849): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=10736 RO-data=7076 RW-data=164 ZI-data=12524  
-"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(734): warning:  #177-D: variable "output" was declared but never referenced
-main.c(849): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=10724 RO-data=7076 RW-data=164 ZI-data=12524  
-"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(734): warning:  #177-D: variable "output" was declared but never referenced
-main.c(849): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=10720 RO-data=7076 RW-data=164 ZI-data=12524  
-"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(331): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(327): warning:  #177-D: variable "j" was declared but never referenced
-main.c(402): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(638): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(642): warning:  #61-D: integer operation result is out of range
-main.c(734): warning:  #177-D: variable "output" was declared but never referenced
-main.c(850): warning:  #1-D: last line of file ends without a newline
-linking...
-Program Size: Code=10732 RO-data=7076 RW-data=164 ZI-data=12524  
-"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(180): warning:  #61-D: integer operation result is out of range
-main.c(327): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(323): warning:  #177-D: variable "j" was declared but never referenced
-main.c(398): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(551): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(555): warning:  #61-D: integer operation result is out of range
-main.c(647): warning:  #177-D: variable "output" was declared but never referenced
-main.c(705): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(705): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(711): error:  #29: expected an expression
-main.c(57): warning:  #177-D: variable "gameOver" was declared but never referenced
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(180): warning:  #61-D: integer operation result is out of range
-main.c(327): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(323): warning:  #177-D: variable "j" was declared but never referenced
-main.c(398): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(551): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(555): warning:  #61-D: integer operation result is out of range
-main.c(647): warning:  #177-D: variable "output" was declared but never referenced
-main.c(707): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(707): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(723): error:  #20: identifier "mines" is undefined
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(180): warning:  #61-D: integer operation result is out of range
-main.c(327): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(323): warning:  #177-D: variable "j" was declared but never referenced
-main.c(398): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(551): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(555): warning:  #61-D: integer operation result is out of range
-main.c(647): warning:  #177-D: variable "output" was declared but never referenced
-main.c(707): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(707): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11100 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(657): warning:  #177-D: variable "output" was declared but never referenced
-main.c(717): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(717): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(778): error:  #20: identifier "gameOver" is undefined
-main.c(792): error:  #136: struct "tankCharacs" has no field "ynext"
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(657): warning:  #177-D: variable "output" was declared but never referenced
-main.c(717): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(717): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11144 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(657): warning:  #177-D: variable "output" was declared but never referenced
-main.c(717): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(717): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11160 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 9 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(657): warning:  #177-D: variable "output" was declared but never referenced
-main.c(717): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(717): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11208 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 9 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(624): error:  #165: too few arguments in function call
-main.c(633): error:  #165: too few arguments in function call
-main.c(645): error:  #165: too few arguments in function call
-main.c(660): warning:  #177-D: variable "output" was declared but never referenced
-main.c(720): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(720): warning:  #186-D: pointless comparison of unsigned integer with zero
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(660): warning:  #177-D: variable "output" was declared but never referenced
-main.c(720): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(720): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11240 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 9 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(660): warning:  #177-D: variable "output" was declared but never referenced
-main.c(720): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(720): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11228 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 9 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(660): warning:  #177-D: variable "output" was declared but never referenced
-main.c(720): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(720): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11240 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 9 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-linking...
-Program Size: Code=11240 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(660): warning:  #177-D: variable "output" was declared but never referenced
-main.c(720): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(720): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11232 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 9 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(661): warning:  #177-D: variable "output" was declared but never referenced
-main.c(721): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(721): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11248 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 9 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(184): warning:  #61-D: integer operation result is out of range
-main.c(337): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(333): warning:  #177-D: variable "j" was declared but never referenced
-main.c(408): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(561): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(565): warning:  #61-D: integer operation result is out of range
-main.c(662): warning:  #177-D: variable "output" was declared but never referenced
-main.c(722): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(722): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11260 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 9 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(678): error:  #136: struct "mineCharacs" has no field "curSet"
-main.c(679): error:  #136: struct "mineCharacs" has no field "curSet"
-main.c(680): error:  #136: struct "mineCharacs" has no field "curSet"
-main.c(681): error:  #136: struct "mineCharacs" has no field "curSet"
-main.c(682): error:  #136: struct "mineCharacs" has no field "curSet"
-main.c(683): error:  #136: struct "mineCharacs" has no field "curSet"
-main.c(684): error:  #136: struct "mineCharacs" has no field "curSet"
-main.c(685): error:  #136: struct "mineCharacs" has no field "curSet"
-main.c(695): warning:  #177-D: variable "output" was declared but never referenced
-main.c(755): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(755): warning:  #186-D: pointless comparison of unsigned integer with zero
-Target not created
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(681): warning:  #174-D: expression has no effect
-main.c(695): warning:  #177-D: variable "output" was declared but never referenced
-main.c(755): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(755): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11208 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(681): warning:  #174-D: expression has no effect
-main.c(695): warning:  #177-D: variable "output" was declared but never referenced
-main.c(755): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(755): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11208 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(696): warning:  #177-D: variable "output" was declared but never referenced
-main.c(756): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(756): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11216 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11228 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(761): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(761): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11248 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(761): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(761): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11248 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(765): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(765): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11268 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(759): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(759): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11228 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(763): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(763): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11248 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(765): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(765): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11256 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11268 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11268 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11268 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(768): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(768): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11280 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11268 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11268 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(189): warning:  #61-D: integer operation result is out of range
-main.c(347): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(343): warning:  #177-D: variable "j" was declared but never referenced
-main.c(418): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(571): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(575): warning:  #61-D: integer operation result is out of range
-main.c(634): warning:  #9-D: nested comment is not allowed
-main.c(642): warning:  #9-D: nested comment is not allowed
-main.c(651): warning:  #9-D: nested comment is not allowed
-main.c(682): warning:  #174-D: expression has no effect
-main.c(697): warning:  #177-D: variable "output" was declared but never referenced
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
-linking...
-Program Size: Code=11256 RO-data=7076 RW-data=160 ZI-data=12520  
-"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
-Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
 main.c(191): warning:  #61-D: integer operation result is out of range
 main.c(349): warning:  #186-D: pointless comparison of unsigned integer with zero
 main.c(345): warning:  #177-D: variable "j" was declared but never referenced
@@ -833,12 +18,12 @@ main.c(577): warning:  #61-D: integer operation result is out of range
 main.c(638): warning:  #9-D: nested comment is not allowed
 main.c(646): warning:  #9-D: nested comment is not allowed
 main.c(655): warning:  #9-D: nested comment is not allowed
-main.c(686): warning:  #174-D: expression has no effect
-main.c(701): warning:  #177-D: variable "output" was declared but never referenced
-main.c(771): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(771): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(685): warning:  #174-D: expression has no effect
+main.c(699): warning:  #177-D: variable "output" was declared but never referenced
+main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
 linking...
-Program Size: Code=11296 RO-data=7076 RW-data=160 ZI-data=12520  
+Program Size: Code=11236 RO-data=7076 RW-data=160 ZI-data=12520  
 "MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
 Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
 Erase Done.
@@ -860,12 +45,921 @@ main.c(699): warning:  #177-D: variable "output" was declared but never referenc
 main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
 main.c(767): warning:  #186-D: pointless comparison of unsigned integer with zero
 linking...
-Program Size: Code=11248 RO-data=7076 RW-data=160 ZI-data=12520  
+Program Size: Code=11236 RO-data=7076 RW-data=160 ZI-data=12520  
 "MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(349): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(420): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(573): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(577): warning:  #61-D: integer operation result is out of range
+main.c(638): warning:  #9-D: nested comment is not allowed
+main.c(646): warning:  #9-D: nested comment is not allowed
+main.c(655): warning:  #9-D: nested comment is not allowed
+main.c(685): warning:  #174-D: expression has no effect
+main.c(702): warning:  #177-D: variable "output" was declared but never referenced
+main.c(770): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(770): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11240 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(349): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(420): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(573): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(577): warning:  #61-D: integer operation result is out of range
+main.c(638): warning:  #9-D: nested comment is not allowed
+main.c(646): warning:  #9-D: nested comment is not allowed
+main.c(655): warning:  #9-D: nested comment is not allowed
+main.c(687): warning:  #174-D: expression has no effect
+main.c(701): warning:  #177-D: variable "output" was declared but never referenced
+main.c(769): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(769): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11240 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(349): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(420): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(573): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(577): warning:  #61-D: integer operation result is out of range
+main.c(638): warning:  #9-D: nested comment is not allowed
+main.c(646): warning:  #9-D: nested comment is not allowed
+main.c(655): warning:  #9-D: nested comment is not allowed
+main.c(687): warning:  #174-D: expression has no effect
+main.c(701): warning:  #177-D: variable "output" was declared but never referenced
+main.c(769): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(769): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11236 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 13 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(628): warning:  #9-D: nested comment is not allowed
+main.c(636): warning:  #9-D: nested comment is not allowed
+main.c(645): warning:  #9-D: nested comment is not allowed
+main.c(675): warning:  #174-D: expression has no effect
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11220 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 12 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(628): warning:  #9-D: nested comment is not allowed
+main.c(636): warning:  #9-D: nested comment is not allowed
+main.c(645): warning:  #9-D: nested comment is not allowed
+main.c(675): warning:  #174-D: expression has no effect
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11220 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 12 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11240 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11180 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11188 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11200 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(628): warning:  #9-D: nested comment is not allowed
+main.c(636): warning:  #9-D: nested comment is not allowed
+main.c(645): warning:  #9-D: nested comment is not allowed
+main.c(674): warning:  #174-D: expression has no effect
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11208 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 12 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11172 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11180 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11188 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11196 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11172 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11152 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11172 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11184 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
 Build target 'Target 1'
 linking...
-Program Size: Code=11248 RO-data=7076 RW-data=160 ZI-data=12520  
+Program Size: Code=11184 RO-data=7076 RW-data=160 ZI-data=12520  
 "MinefieldGame.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(757): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11172 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(689): warning:  #177-D: variable "output" was declared but never referenced
+main.c(760): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(760): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11188 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 8 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(730): error:  #20: identifier "state" is undefined
+main.c(786): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(786): warning:  #186-D: pointless comparison of unsigned integer with zero
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11156 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11180 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11188 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11192 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11192 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11192 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11192 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11192 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11192 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11192 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(789): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(789): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11208 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11228 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11224 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11224 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11224 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11228 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(790): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11224 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(191): warning:  #61-D: integer operation result is out of range
+main.c(345): warning:  #177-D: variable "j" was declared but never referenced
+main.c(410): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(563): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(567): warning:  #61-D: integer operation result is out of range
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(788): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11192 RO-data=7076 RW-data=160 ZI-data=12520  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(607): error:  #20: identifier "bullshitMtx" is undefined
+main.c(793): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(793): warning:  #186-D: pointless comparison of unsigned integer with zero
+Target not created
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(793): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(793): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11224 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(795): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(795): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11604 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+linking...
+Program Size: Code=11604 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(795): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(795): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11224 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11628 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11628 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11632 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11632 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11632 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11632 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11632 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11632 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11648 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11648 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+linking...
+Program Size: Code=11648 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 0 Warning(s).
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Build target 'Target 1'
+compiling main.c...
+main.c(193): warning:  #61-D: integer operation result is out of range
+main.c(347): warning:  #177-D: variable "j" was declared but never referenced
+main.c(412): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(565): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(569): warning:  #61-D: integer operation result is out of range
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(797): warning:  #186-D: pointless comparison of unsigned integer with zero
+linking...
+Program Size: Code=11648 RO-data=7076 RW-data=160 ZI-data=12528  
+"MinefieldGame.axf" - 0 Error(s), 7 Warning(s).
 Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
 Erase Done.
 Programming Done.

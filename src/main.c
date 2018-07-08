@@ -44,6 +44,8 @@ OS_SEM collSem;
 OS_SEM dispSem;
 OS_SEM scoreSem;
 
+OS_MUT dataMTX;
+
 // FUNCTION PROTOTYPES //
 __task void mines_task(void);
 __task void tank_task(void);
@@ -239,7 +241,7 @@ void tankCharacsInit() {
 	tank.xCur = 0;
 	tank.yCur = 14;
 	tank.xNext = 0;
-	tank.yNext = 0;
+	tank.yNext = 14;
 }
 
 void mineStatesInit() {
@@ -343,17 +345,6 @@ void mineSetPrint(uint8_t setNum, MineState mState) {
 	//variables
 	int i = 0;
 	int j = 0;
-	int needReprint = 0;
-	
-	//check for valid input
-	if(setNum < 0 || setNum > 3)
-		return;
-	
-	//check if re-print required
-	if(minesNext[setNum] != minesCur[setNum])
-		needReprint = 1;
-	if(!needReprint)
-		return;
 	
 	//store mine state in global array
 	minesCur[setNum] = mState;
@@ -380,6 +371,7 @@ void mineSetPrint(uint8_t setNum, MineState mState) {
 		case T4:
 			GLCD_SetTextColor(map.minesRed);
 	}
+	
 	
 	if(setNum == 0) {
 		for(i=0; i<51; i++) {
@@ -611,10 +603,13 @@ __task void init_tasks(void) {
 	os_sem_init(&dispSem,0);
 	os_sem_init(&scoreSem,0);
 	
+	//initialize mutex
+	os_mut_init(&dataMTX);
+	
 	//initialize tasks
 	os_tsk_create(mines_task,1);
 	os_tsk_create(tank_task,1);
-	os_tsk_create(joy_task,1);
+	//os_tsk_create(joy_task,1);
 	os_tsk_create(coll_task,1);
 	os_tsk_create(display_task,1);
 	os_tsk_create(score_task,1);
@@ -623,7 +618,7 @@ __task void init_tasks(void) {
 	os_tsk_delete_self();
 }
 
-/*
+
 //updates mine set states
 __task void mines_task(void) {
 	//mine state tracking variable
@@ -632,7 +627,7 @@ __task void mines_task(void) {
 	os_itv_set(map.minesCycleSpeed);
 	
 	while(1) {
-		os_sem_wait(&minesSem, TIMEOUT_INDEFINITE); //wait on previous task
+		//os_sem_wait(&minesSem, TIMEOUT_INDEFINITE); //wait on previous task
 		
 		//change state of current mine set to PRIMED
 		minesNext[i] = PRIMED; //*
@@ -640,23 +635,23 @@ __task void mines_task(void) {
 		os_sem_send(&tankSem); //signal next task
 		os_itv_wait();
 		
-		os_sem_wait(&minesSem, TIMEOUT_INDEFINITE); //wait on previous task
+		//os_sem_wait(&minesSem, TIMEOUT_INDEFINITE); //wait on previous task
 		
 		//change state of current mine set to EXP
 		minesNext[i] = EXP; //*
 		
-		os_sem_send(&tankSem); //signal next task
+		//os_sem_send(&tankSem); //signal next task
 		os_itv_wait();
 		
 		//change state of current mine set to INVIS
 		//change state of next mine set to PRIMED
-		os_sem_wait(&minesSem, TIMEOUT_INDEFINITE); //wait on previous task
+		//os_sem_wait(&minesSem, TIMEOUT_INDEFINITE); //wait on previous task
 		
 		minesNext[i] = INVIS; //*
 		if(i==3) minesNext[0] = PRIMED;
 			else minesNext[i+1] = PRIMED;
 		
-		os_sem_send(&tankSem); //signal next task
+		//os_sem_send(&tankSem); //signal next task
 		os_itv_wait();
 		
 		//increment state counter
@@ -666,21 +661,20 @@ __task void mines_task(void) {
 		
 	}
 }
-*/
 
+
+/*
 __task void mines_task(void) {
 	os_itv_set(map.minesCycleSpeed);
 	
 	while(1) {
 		os_sem_wait(&minesSem, TIMEOUT_INDEFINITE);
 		
-		/*
-			iterate through the current mine set from INVIS to EXP
-			if current mine set is in the EXP state, change this set
-			to INVIS state and change next mine set to PRIMED state
-		*/
+		//iterate through the current mine set from INVIS to EXP
+		//if current mine set is in the EXP state, change this set
+		//to INVIS state and change next mine set to PRIMED state
 		if(minesCur[mines.setCur] == INVIS)
-			minesNext[mines.setCur] = PRIMED;
+				minesNext[mines.setCur] = PRIMED;
 		else if(minesCur[mines.setCur] == PRIMED)
 			minesNext[mines.setCur] == EXP;
 		else if(minesCur[mines.setCur] == EXP) {
@@ -693,7 +687,9 @@ __task void mines_task(void) {
 		os_sem_send(&tankSem);
 	}
 }
+*/
 
+/*
 __task void joy_task(void) {
 	uint8_t state = 0;
 	char* output;
@@ -721,16 +717,49 @@ __task void joy_task(void) {
 			if((state & (0x01 << 4)) > 0)
 				tank.isMoving = 1;
 			
+			
 			os_sem_send(&collSem);
 			os_sem_send(&tankSem);
 		}
 	}
 }
+*/
 
 //updates tank position data
 __task void tank_task(void) {
+	uint8_t state = 0;
+	os_itv_set(map.minesCycleSpeed/20);
+	
 	while(1) {
-		if(tank.isMoving == 1) {
+		os_mut_wait(&dataMTX, TIMEOUT_INDEFINITE);
+		os_itv_wait();
+		if(tank.isMoving == 0) {
+			os_sem_wait(&tankSem, TIMEOUT_INDEFINITE);
+			
+			
+			state = joyStickRead();
+			if((state & 0x07) == 0x01) {
+				tank.dirNext = LEFT;
+			}
+			else if((state & 0x07) == 0x02) {
+				tank.dirNext = RIGHT;
+			}
+			else if((state & 0x07) == 0x03) {
+				tank.dirNext = DOWN;
+			}
+			else if((state & 0x07) == 0x04) {
+				tank.dirNext = UP;
+			}
+			
+				
+			if((state & (0x01 << 4)) > 0)
+				tank.isMoving = 1;
+			
+			
+			os_sem_send(&collSem);
+			os_sem_send(&tankSem);
+		}
+		else if(tank.isMoving == 1) {
 			os_sem_wait(&tankSem, TIMEOUT_INDEFINITE);
 			
 			
@@ -751,6 +780,7 @@ __task void tank_task(void) {
 			os_sem_send(&collSem);
 			os_sem_send(&tankSem);
 		}
+		os_mut_release(&dataMTX);
 	}
 }
 
@@ -758,10 +788,10 @@ __task void coll_task(void) {
 	int i=0;
 	uint16_t column = 0;
 	uint8_t setNum = 0;
-	
+	game.gameOver = 0;
 	while(1) {
-		os_sem_wait(&collSem, TIMEOUT_INDEFINITE);
-		
+		//os_sem_wait(&collSem, TIMEOUT_INDEFINITE);
+		os_mut_wait(&dataMTX, TIMEOUT_INDEFINITE);
 		
 		//If next co-ordinate is on the edge then shift back to prev. co-ordinate and stop
 		if(tank.xNext>19 || tank.xNext < 0 || tank.yNext > 14 || tank.yNext < 0){
@@ -780,36 +810,38 @@ __task void coll_task(void) {
 		}
 		
 		for(i=0; i<4; i++) {
-			if(minesCur[i] == EXP)
+			if(minesCur[i] == EXP){
 				setNum = i;
-		}
-		
-		if(setNum == 0) {
-			for(i=0; i<51; i++) {
-				if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
-					game.gameOver = 1;
+				if(setNum == 0) {
+					for(i=0; i<51; i++) {
+						if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
+							game.gameOver = 1;
+					}
+				}
+				else if(setNum == 1) {
+					for(i=0; i<56; i++) {
+						if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
+							game.gameOver = 1;
+					}
+				}
+				else if(setNum == 2) {
+					for(i=0; i<58; i++) {
+						if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
+							game.gameOver = 1;
+					}
+				}
+				else if(setNum == 3) {
+					for(i=0; i<59; i++) {
+						if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
+							game.gameOver = 1;
+					}
+				}
 			}
 		}
-		else if(setNum == 1) {
-			for(i=0; i<56; i++) {
-				if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
-					game.gameOver = 1;
-			}
-		}
-		else if(setNum == 2) {
-			for(i=0; i<58; i++) {
-				if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
-					game.gameOver = 1;
-			}
-		}
-		else if(setNum == 3) {
-			for(i=0; i<59; i++) {
-				if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
-					game.gameOver = 1;
-			}
-		}
-		
+				
 		os_sem_send(&dispSem);
+		os_mut_release(&dataMTX);
+		//os_sem_send(&collSem);
 	}
 }
 
@@ -829,19 +861,22 @@ __task void display_task(void) {
 			tankPrint(5,5,DOWN);
 		}
 		
-		//print mine sets if changed
+		//print mines if state changed
 		for(i=0; i<4; i++) {
-			mineSetPrint(i,minesNext[i]);
+			if(minesNext[i] != minesCur[i])
+				mineSetPrint(i, minesNext[i]);
 		}
+		
 		
 		//print tank if direction/position changed
 		if(tank.dirNext != tank.dirCur || tank.xNext != tank.xCur || tank.yNext != tank.yCur) {
+			blockClear(tank.xCur,tank.yCur);
+			
 			//store new tank data
 			tank.dirCur = tank.dirNext;
 			tank.xCur = tank.xNext;
 			tank.yCur = tank.yNext;
 			
-			blockClear(tank.xCur,tank.yCur);
 			tankPrint(tank.xCur,tank.yCur,tank.dirNext);
 		}
 		
@@ -852,12 +887,14 @@ __task void display_task(void) {
 }
 
 __task void score_task(void) {
+	os_itv_set(map.minesCycleSpeed*5);
 	while(1) {
 		os_sem_wait(&scoreSem, TIMEOUT_INDEFINITE);
 		
-		game.score++;
+		(game.score)++;
 		ledDisplay(game.score);
 		
+		os_itv_wait();
 		os_sem_send(&minesSem);
 	}
 }
@@ -867,22 +904,6 @@ int main(void) {
 	mapPrint();
 	printf("test");
 	os_sys_init(init_tasks);
-	
-	/*
-	mapPrint();
-	mineSetPrint(0, T1);
-	mineSetPrint(1, T2);
-	mineSetPrint(2, T3);
-	mineSetPrint(3, T4);
-	*/
-	//tankPrint(0,0,LEFT);
-	//tankMove(0,0, LEFT);
-	/*
-	tankPrint(0,2,DOWN);
-	tankPrint(0,4,LEFT);
-	tankPrint(0,6,RIGHT);
-	*/
-	//while(1) {}
 }
 
 
