@@ -837,19 +837,19 @@ __task void coll_task(void) {
 				}
 				else if(setNum == 1) {
 					for(i=0; i<56; i++) {
-						if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
+						if(tank.xNext == mineSet2X[i] && tank.yNext == mineSet2Y[i])
 							game.gameOver = 1;
 					}
 				}
 				else if(setNum == 2) {
 					for(i=0; i<58; i++) {
-						if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
+						if(tank.xNext == mineSet3X[i] && tank.yNext == mineSet3Y[i])
 							game.gameOver = 1;
 					}
 				}
 				else if(setNum == 3) {
 					for(i=0; i<59; i++) {
-						if(tank.xNext == mineSet1X[i] && tank.yNext == mineSet1Y[i])
+						if(tank.xNext == mineSet4X[i] && tank.yNext == mineSet4Y[i])
 							game.gameOver = 1;
 					}
 				}
