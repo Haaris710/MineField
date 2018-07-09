@@ -1,0 +1,5 @@
+-c --cpu Cortex-M3 -D__RTX -D__MICROLIB -g -O0 --apcs=interwork 
+-I c:\Software\Keil\ARM\RV31\INC 
+-I c:\Software\Keil\ARM\CMSIS\Include 
+-I c:\Software\Keil\ARM\Inc\NXP\LPC17xx 
+-D__RTGT_UART -o "uart.o" --omf_browse "uart.crf" --depend "uart.d" "uart.c"

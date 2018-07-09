@@ -932,10 +932,42 @@ __task void score_task(void) {
 	}
 }
 
+void startScreen(){
+//Local variables for start screen
+	uint32_t bufferJoystick = 0;
+	char* startMessage1;
+	char* startMessage2;
+	startMessage1 = "Press Joystick";
+	startMessage2 = "button to start";
+	
+//Buffer for Joystick button press	
+	bufferJoystick = 0;
+	bufferJoystick |= LPC_GPIO1->FIOPIN;
+	
+//Printing Start screen	
+	GLCD_Clear(Red);
+	GLCD_SetBackColor(Red);
+	GLCD_SetTextColor(Black);
+	GLCD_DisplayString(5,1,1, startMessage1);
+	GLCD_DisplayString(6,1,1, startMessage2);
+
+//Waiting for joystick button press	
+	while(!((LPC_GPIO1->FIOPIN & BIT20) == 0)){
+		
+	}
+	
+//Configuring screen settings for the game	
+	GLCD_Clear(Black);
+	GLCD_SetBackColor(Black);
+}
+
 int main(void) {
 	initialization();
+	//start screen
+	startScreen();
+	//printing map after the start screen
 	mapPrint();
-	printf("test");
+	//initialization of tasks
 	os_sys_init(init_tasks);
 }
 
