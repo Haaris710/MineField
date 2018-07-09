@@ -66,6 +66,7 @@ __task void score_task(void);
 struct gameCharacs {
 	uint8_t gameOver;
 	uint8_t score;
+	char* startMessage;
 	char* endMessage;
 	char endScore[20];
 };
@@ -238,7 +239,7 @@ void mapCharacsInit() {
 	map.minesRed = Red;
 	
 	//score characteristics
-	map.scoreCycleSpeed = map.minesCycleSpeed*5;
+	map.scoreCycleSpeed = ONE_SECOND*2*2;
 	
 	//tank characteristics
 	map.tankRefreshRate = map.minesCycleSpeed/20;
@@ -248,6 +249,7 @@ void gameCharacsInit() {
 	game.gameOver = 0;
 	game.score = 0;
 	game.endMessage = "GAME OVER";
+	game.startMessage = "MINEFIELD";
 }
 
 void mineCharacsInit() {
@@ -650,9 +652,10 @@ __task void mines_task(void) {
 	//mine state tracking variable
 	int i = 0;
 	//set cycle speed
-	os_itv_set(map.minesCycleSpeed);
+	//os_itv_set(map.minesCycleSpeed);
 	
 	while(1) {
+		os_itv_set(map.minesCycleSpeed);
 		//os_sem_wait(&minesSem, TIMEOUT_INDEFINITE); //wait on previous task
 		
 		//change state of current mine set to PRIMED
@@ -810,17 +813,17 @@ __task void coll_task(void) {
 
 void endScreenPrint(void) {
 	snprintf(game.endScore, 20, "SCORE: %d Pts", game.score);
-	GLCD_Clear(Red);
-	GLCD_SetBackColor(Red);
-	GLCD_SetTextColor(White);
-	GLCD_DisplayString(1,5,1, game.endMessage);
-	GLCD_DisplayString(3,1,1, game.endScore);
+	GLCD_Clear(White);
+	GLCD_SetBackColor(White);
+	GLCD_SetTextColor(Black);
+	GLCD_DisplayString(4,5,1, game.endMessage);
+	GLCD_DisplayString(16,20,0, game.endScore);
 }
 
 //Uses tank data and mine data to print display
 __task void display_task(void) {
 	int i=0;
-	
+	int setNum =0;
 	//print tank starting position
 	tankPrint(tank.xCur, tank.yCur, tank.dirCur);
 	
@@ -834,15 +837,9 @@ __task void display_task(void) {
 			break;
 		}
 		
-		//print mines if state changed
-		for(i=0; i<4; i++) {
-			if(minesNext[i] != minesCur[i])
-				mineSetPrint(i, minesNext[i]);
-		}
-		
-		
 		//print tank if direction/position changed
 		if(tank.dirNext != tank.dirCur || tank.xNext != tank.xCur || tank.yNext != tank.yCur) {
+			
 			blockClear(tank.xCur,tank.yCur);
 			
 			//store new tank data
@@ -851,8 +848,19 @@ __task void display_task(void) {
 			tank.yCur = tank.yNext;
 			
 			tankPrint(tank.xCur,tank.yCur,tank.dirNext);
+			
+			//Reprint PRIMED mine set in case tank drove over them
+			for(i=0;i<4;i++) {
+				if(minesNext[i] == PRIMED)
+					mineSetPrint(i, minesNext[i]);
+			}
 		}
 		
+		//print mines if state changed
+		for(i=0; i<4; i++) {
+			if(minesNext[i] != minesCur[i])
+				mineSetPrint(i, minesNext[i]);
+		}
 		
 		os_sem_send(&scoreSem);
 		//os_sem_send(&minesSem);
@@ -867,13 +875,56 @@ __task void score_task(void) {
 		(game.score)++;
 		ledDisplay(game.score);
 		
+		map.minesCycleSpeed = map.minesCycleSpeed*0.8;
+		
 		os_itv_wait();
 		os_sem_send(&minesSem);
 	}
 }
 
+void startScreen() {
+	char* m1;
+	char* m2;
+	char* m3;
+	char* m4;
+	char* m5;
+	char* m6;
+	uint32_t bufferJoystick = 0;
+	
+	m1 = "Avoid landing on exploded mines";
+	m2 = "About to explode = yellow, exploded = red";
+	m3 = "Use joystick to set direction";
+	m4 = "Use joystick push to run tank";
+	m5 = "Use push button to stop tank";
+	m6 = "PUSH JOYSTICK BUTTON TO START";
+	
+	//Buffer for Joystick button press	
+	bufferJoystick = 0;
+	bufferJoystick |= LPC_GPIO1->FIOPIN;
+	
+	snprintf(game.endScore, 20, "SCORE: %d Pts", game.score);
+	GLCD_Clear(White);
+	GLCD_SetBackColor(White);
+	GLCD_SetTextColor(Black);
+	GLCD_DisplayString(1,5,1, game.startMessage);
+	GLCD_DisplayString(9,2,0, m1);
+	GLCD_DisplayString(11,2,0, m2);
+	GLCD_DisplayString(13,2,0, m3);
+	GLCD_DisplayString(15,2,0, m4);
+	GLCD_DisplayString(17,2,0, m5);
+	GLCD_DisplayString(25,2,0, m6);
+	
+	//Waiting for joystick button press	
+	while(!((LPC_GPIO1->FIOPIN & BIT20) == 0)){
+		
+	}
+	
+	//Configuring screen settings for the game	
+	GLCD_Clear(Black);
+	GLCD_SetBackColor(Black);
+}
 
-
+/*
 void startScreen(){
 //Local variables for start screen
 	uint32_t bufferJoystick = 0;
@@ -902,6 +953,7 @@ void startScreen(){
 	GLCD_Clear(Black);
 	GLCD_SetBackColor(Black);
 }
+*/
 
 int main(void) {
 	initialization();
