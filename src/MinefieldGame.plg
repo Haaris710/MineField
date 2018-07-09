@@ -3,8 +3,8 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-N:\GitProjects\Git\MineField\src\MinefieldGame.uvproj
-Project File Date:  07/08/2018
+N:\Program Files\Git\MineField\src\MinefieldGame.uvproj
+Project File Date:  07/04/2018
 
 <h2>Output:</h2>
 Build target 'Target 1'
@@ -15,129 +15,56 @@ compiling led.c...
 compiling Retarget.c...
 compiling uart.c...
 compiling main.c...
-main.c(204): warning:  #61-D: integer operation result is out of range
-main.c(364): warning:  #177-D: variable "j" was declared but never referenced
-main.c(429): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(582): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(586): warning:  #61-D: integer operation result is out of range
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(886): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(887): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(951): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(952): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(206): warning:  #61-D: integer operation result is out of range
+main.c(367): warning:  #177-D: variable "j" was declared but never referenced
+main.c(432): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(585): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(589): warning:  #61-D: integer operation result is out of range
+main.c(760): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(760): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(816): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(817): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(891): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(892): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
 linking...
-Program Size: Code=12192 RO-data=7076 RW-data=168 ZI-data=12536  
+Program Size: Code=12232 RO-data=7076 RW-data=164 ZI-data=12564  
 "MinefieldGame.axf" - 0 Error(s), 11 Warning(s).
-Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
 Erase Done.
 Programming Done.
 Verify OK.
 Build target 'Target 1'
 compiling main.c...
-main.c(204): warning:  #61-D: integer operation result is out of range
-main.c(364): warning:  #177-D: variable "j" was declared but never referenced
-main.c(429): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(582): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(586): warning:  #61-D: integer operation result is out of range
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(886): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(887): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(951): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(952): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-linking...
-Program Size: Code=12192 RO-data=7076 RW-data=168 ZI-data=12536  
-"MinefieldGame.axf" - 0 Error(s), 11 Warning(s).
-Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-linking...
-Program Size: Code=12192 RO-data=7076 RW-data=168 ZI-data=12536  
-"MinefieldGame.axf" - 0 Error(s), 0 Warning(s).
-Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
+main.c(206): warning:  #61-D: integer operation result is out of range
+main.c(367): warning:  #177-D: variable "j" was declared but never referenced
+main.c(432): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(585): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(589): warning:  #61-D: integer operation result is out of range
+main.c(760): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(760): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(816): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(817): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(879): error:  #247: function "startScreen" has already been defined
+main.c(895): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(896): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+Target not created
 Build target 'Target 1'
 compiling main.c...
-main.c(204): warning:  #61-D: integer operation result is out of range
-main.c(364): warning:  #177-D: variable "j" was declared but never referenced
-main.c(429): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(582): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(586): warning:  #61-D: integer operation result is out of range
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(886): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(887): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(951): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(952): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(206): warning:  #61-D: integer operation result is out of range
+main.c(367): warning:  #177-D: variable "j" was declared but never referenced
+main.c(432): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
+main.c(585): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(589): warning:  #61-D: integer operation result is out of range
+main.c(760): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(760): warning:  #186-D: pointless comparison of unsigned integer with zero
+main.c(816): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(817): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(893): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
+main.c(894): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
 linking...
-Program Size: Code=12192 RO-data=7076 RW-data=168 ZI-data=12536  
+Program Size: Code=12236 RO-data=7076 RW-data=164 ZI-data=12564  
 "MinefieldGame.axf" - 0 Error(s), 11 Warning(s).
-Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(204): warning:  #61-D: integer operation result is out of range
-main.c(364): warning:  #177-D: variable "j" was declared but never referenced
-main.c(429): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(582): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(586): warning:  #61-D: integer operation result is out of range
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(914): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(915): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(979): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(980): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-linking...
-Program Size: Code=12392 RO-data=7076 RW-data=168 ZI-data=12536  
-"MinefieldGame.axf" - 0 Error(s), 11 Warning(s).
-Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(204): warning:  #61-D: integer operation result is out of range
-main.c(364): warning:  #177-D: variable "j" was declared but never referenced
-main.c(429): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(582): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(586): warning:  #61-D: integer operation result is out of range
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(886): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(887): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(951): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(952): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-linking...
-Program Size: Code=12192 RO-data=7076 RW-data=168 ZI-data=12536  
-"MinefieldGame.axf" - 0 Error(s), 11 Warning(s).
-Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
-Erase Done.
-Programming Done.
-Verify OK.
-Build target 'Target 1'
-compiling main.c...
-main.c(204): warning:  #61-D: integer operation result is out of range
-main.c(364): warning:  #177-D: variable "j" was declared but never referenced
-main.c(429): warning:  #223-D: function "GLCD_RemovePixel" declared implicitly
-main.c(582): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(586): warning:  #61-D: integer operation result is out of range
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(814): warning:  #186-D: pointless comparison of unsigned integer with zero
-main.c(886): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(887): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(951): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-main.c(952): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "unsigned char *"
-linking...
-Program Size: Code=12216 RO-data=7076 RW-data=168 ZI-data=12536  
-"MinefieldGame.axf" - 0 Error(s), 11 Warning(s).
-Load "N:\\GitProjects\\Git\\MineField\\src\\MinefieldGame.AXF" 
+Load "N:\\Program Files\\Git\\MineField\\src\\MinefieldGame.AXF" 
 Erase Done.
 Programming Done.
 Verify OK.

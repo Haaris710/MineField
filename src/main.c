@@ -46,11 +46,11 @@ OS_SEM scoreSem;
 
 OS_MUT dataMTX;
 
-OS_TID tsk1;
-OS_TID tsk2;
-OS_TID tsk3;
-OS_TID tsk4;
-OS_TID tsk5;
+OS_TID tskMine;
+OS_TID tskTank;
+OS_TID tskColl;
+OS_TID tskDisp;
+OS_TID tskScore;
 
 // FUNCTION PROTOTYPES //
 __task void mines_task(void);
@@ -66,6 +66,8 @@ __task void score_task(void);
 struct gameCharacs {
 	uint8_t gameOver;
 	uint8_t score;
+	char* endMessage;
+	char endScore[20];
 };
 struct gameCharacs game;
 
@@ -245,6 +247,7 @@ void mapCharacsInit() {
 void gameCharacsInit() {
 	game.gameOver = 0;
 	game.score = 0;
+	game.endMessage = "GAME OVER";
 }
 
 void mineCharacsInit() {
@@ -624,17 +627,23 @@ __task void init_tasks(void) {
 	os_mut_init(&dataMTX);
 	
 	//initialize tasks
-	tsk1 = os_tsk_create(mines_task,1);
-	tsk2 = os_tsk_create(tank_task,1);
-	//os_tsk_create(joy_task,1);
-	tsk3 = os_tsk_create(coll_task,1);
-	tsk4 = os_tsk_create(display_task,1);
-	tsk5 = os_tsk_create(score_task,1);
+	tskMine = os_tsk_create(mines_task,1);
+	tskTank = os_tsk_create(tank_task,1);
+	tskColl = os_tsk_create(coll_task,1);
+	tskDisp = os_tsk_create(display_task,1);
+	tskScore = os_tsk_create(score_task,1);
 	
 	//init_tasks self delete
 	os_tsk_delete_self();
 }
 
+//deletes all tasks
+void del_tasks(void) {
+	os_tsk_delete(tskMine);
+	os_tsk_delete(tskTank);
+	os_tsk_delete(tskColl);
+	os_tsk_delete(tskScore);
+}
 
 //updates mine set states
 __task void mines_task(void) {
@@ -678,69 +687,6 @@ __task void mines_task(void) {
 		
 	}
 }
-
-
-/*
-__task void mines_task(void) {
-	os_itv_set(map.minesCycleSpeed);
-	
-	while(1) {
-		os_sem_wait(&minesSem, TIMEOUT_INDEFINITE);
-		
-		//iterate through the current mine set from INVIS to EXP
-		//if current mine set is in the EXP state, change this set
-		//to INVIS state and change next mine set to PRIMED state
-		if(minesCur[mines.setCur] == INVIS)
-				minesNext[mines.setCur] = PRIMED;
-		else if(minesCur[mines.setCur] == PRIMED)
-			minesNext[mines.setCur] == EXP;
-		else if(minesCur[mines.setCur] == EXP) {
-			minesNext[mines.setCur] = INVIS;
-			minesNext[mines.setCur+1] = PRIMED;
-			mines.setCur++;
-		}
-		
-		os_itv_wait();
-		os_sem_send(&tankSem);
-	}
-}
-*/
-
-/*
-__task void joy_task(void) {
-	uint8_t state = 0;
-	char* output;
-	
-	while(1) {
-		if(tank.isMoving == 0) {
-			os_sem_wait(&tankSem, TIMEOUT_INDEFINITE);
-			
-			
-			state = joyStickRead();
-			if((state & 0x07) == 0x01) {
-				tank.dirNext = LEFT;
-			}
-			else if((state & 0x07) == 0x02) {
-				tank.dirNext = RIGHT;
-			}
-			else if((state & 0x07) == 0x03) {
-				tank.dirNext = DOWN;
-			}
-			else if((state & 0x07) == 0x04) {
-				tank.dirNext = UP;
-			}
-			
-				
-			if((state & (0x01 << 4)) > 0)
-				tank.isMoving = 1;
-			
-			
-			os_sem_send(&collSem);
-			os_sem_send(&tankSem);
-		}
-	}
-}
-*/
 
 //updates tank position data
 __task void tank_task(void) {
@@ -862,14 +808,18 @@ __task void coll_task(void) {
 	}
 }
 
+void endScreenPrint(void) {
+	snprintf(game.endScore, 20, "SCORE: %d Pts", game.score);
+	GLCD_Clear(Red);
+	GLCD_SetBackColor(Red);
+	GLCD_SetTextColor(White);
+	GLCD_DisplayString(1,5,1, game.endMessage);
+	GLCD_DisplayString(3,1,1, game.endScore);
+}
 
 //Uses tank data and mine data to print display
 __task void display_task(void) {
 	int i=0;
-	char* endMessage;
-	char endScore[20];
-	
-	endMessage = "GAME OVER";
 	
 	//print tank starting position
 	tankPrint(tank.xCur, tank.yCur, tank.dirCur);
@@ -879,18 +829,8 @@ __task void display_task(void) {
 		
 		//check for gameOver
 		if(game.gameOver) {
-			snprintf(endScore, 20, "Your score: %d", game.score);
-			GLCD_Clear(Red);
-			GLCD_SetBackColor(Red);
-			GLCD_SetTextColor(Black);
-			GLCD_DisplayString(5,1,1, endMessage);
-			GLCD_DisplayString(6,1,1, endScore);
-			
-			//delete tasks
-			os_tsk_delete(tsk1);
-			os_tsk_delete(tsk2);
-			os_tsk_delete(tsk3);
-			os_tsk_delete(tsk5);
+			endScreenPrint();
+			del_tasks();
 			break;
 		}
 		
@@ -931,6 +871,8 @@ __task void score_task(void) {
 		os_sem_send(&minesSem);
 	}
 }
+
+
 
 void startScreen(){
 //Local variables for start screen
