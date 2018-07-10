@@ -199,7 +199,7 @@ static const uint8_t mineSet4Y[59] = {
 //											INITIALIZATION FUNCTIONS												//
 //////////////////////////////////////////////////////////////////////////
 
-void ledInit() {
+void ledInit(void) {
 	//set LEDs to output
 	LPC_GPIO1->FIODIR |= 0xB0000000;
 	LPC_GPIO2->FIODIR |= 0x0000007C;
@@ -208,13 +208,13 @@ void ledInit() {
 	LPC_GPIO2->FIOCLR |= LED_ALL_G2;
 }
 
-void lcdInit() {
+void lcdInit(void) {
 	GLCD_Init();
 	GLCD_Clear(map.mapBackColor);
 	GLCD_SetBackColor(map.mapBackColor);
 }
 
-void mapCharacsInit() {
+void mapCharacsInit(void) {
 	//map characteristics
 	map.scaleFactor = 16;
 	map.mapBackColor = Black;
@@ -245,18 +245,18 @@ void mapCharacsInit() {
 	map.tankRefreshRate = map.minesCycleSpeed/20;
 }
 
-void gameCharacsInit() {
+void gameCharacsInit(void) {
 	game.gameOver = 0;
 	game.score = 0;
 	game.endMessage = "GAME OVER";
 	game.startMessage = "MINEFIELD";
 }
 
-void mineCharacsInit() {
+void mineCharacsInit(void) {
 	mines.setCur = 0;
 }
 
-void tankCharacsInit() {
+void tankCharacsInit(void) {
 	tank.dirCur = UP;
 	tank.dirNext = UP;
 	tank.isMoving = 0;
@@ -266,7 +266,7 @@ void tankCharacsInit() {
 	tank.yNext = 14;
 }
 
-void mineStatesInit() {
+void mineStatesInit(void) {
 	//counter variable
 	int i=0;
 	
@@ -277,7 +277,7 @@ void mineStatesInit() {
 	}
 }
 
-void pushButtonInit() {
+void pushButtonInit(void) {
 	
 	//set push button connected to GPIO
 	LPC_PINCON->PINSEL4 &= ~(3<<20);
@@ -298,7 +298,7 @@ void EINT3_IRQHandler(void) {
 	LPC_GPIOINT->IO2IntClr |= (1<<10);
 }
 
-void initialization() {
+void initialization(void) {
 	SystemInit();
 	ledInit();
 	lcdInit();
@@ -872,7 +872,7 @@ __task void score_task(void) {
 	while(1) {
 		os_sem_wait(&scoreSem, TIMEOUT_INDEFINITE);
 		
-		(game.score)++;
+		(game.score)+=10;
 		ledDisplay(game.score);
 		
 		map.minesCycleSpeed = map.minesCycleSpeed*0.8;
@@ -882,7 +882,94 @@ __task void score_task(void) {
 	}
 }
 
-void startScreen() {
+/*
+void startScreenVertical(void) {
+	int i=0;
+	uint32_t bufferJoystick = 0;
+	
+	//Buffer for Joystick button press	
+	bufferJoystick = 0;
+	bufferJoystick |= LPC_GPIO1->FIOPIN;
+	
+	//Print M
+	for(i=18;i>14;i--) {
+		blockPrint(i,1);
+	}
+	blockPrint(18,2);
+	blockPrint(17,2);
+	for(i=18;i>14;i--) {
+		blockPrint(i,3);
+	}
+	
+	//Print I
+	for(i=18;i>14;i--) {
+		blockPrint(i,5);
+	}
+	
+	//Print N
+	for(i=18;i>14;i--) {
+		blockPrint(i,7);
+	}
+	blockPrint(18,8);
+	for(i=18;i>14;i--) {
+		blockPrint(i,9);
+	}
+	
+	//Print E
+	for(i=18;i>14;i--) {
+		blockPrint(i,11);
+	}
+	blockPrint(18,12);
+	blockPrint(16,12);
+	blockPrint(15,12);
+	blockPrint(18,13);
+	blockPrint(15,13);
+	
+	//Print F
+	for(i=13;i>9;i--) {
+		blockPrint(i,1);
+	}
+	blockPrint(13,2);
+	blockPrint(11,2);
+	blockPrint(13,3);
+	
+	//Print I
+	for(i=13;i>19;i--) {
+		blockPrint(i,5);
+	}
+	
+	//Print E
+	for(i=8;i>4;i--) {
+		blockPrint(i,5);
+	}
+	blockPrint(8,6);
+	blockPrint(6,6);
+	blockPrint(5,6);
+	blockPrint(8,7);
+	blockPrint(5,7);
+	
+	//Print L
+	for(i=8;i>4;i--) {
+		blockPrint(i,9);
+	}
+	blockPrint(5,9);
+	blockPrint(5,10);
+	blockPrint(5,11);
+	
+	//Print D
+	for(i=3;i>-1;i--) {
+		blockPrint(i,11);
+	}
+	blockPrint(3,12);
+	blockPrint(0,12);
+	for(i=3;i>-1;i--) {
+		blockPrint(i,11);
+	}
+	
+}
+*/
+
+void startScreen(void) {
 	char* m1;
 	char* m2;
 	char* m3;
